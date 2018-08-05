@@ -1,0 +1,14 @@
+﻿---
+ID: "956e9e4b-9455-4e08-b812-b00a19d0693d"
+Parent: "396531a5-2563-483b-80fc-9a1354b531b1"
+Template: "d9f98acf-0010-4c19-8e42-e636eb47206c"
+Path: /sitecore/content/Global/Stores
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180805T095805Z

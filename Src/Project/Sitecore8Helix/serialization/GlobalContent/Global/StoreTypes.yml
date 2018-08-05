@@ -1,0 +1,18 @@
+﻿---
+ID: "ca065b89-d686-445c-b5be-31b39198ebf4"
+Parent: "396531a5-2563-483b-80fc-9a1354b531b1"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/Global/StoreTypes
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: network/32x32/home.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180805T094814Z

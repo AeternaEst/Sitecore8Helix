@@ -1,0 +1,20 @@
+﻿@model List<Sitecore8Helix.Website.Models.Store>
+
+<h2>@ViewBag.Title</h2>
+
+<p>@ViewBag.Text</p>
+
+<ul>
+    @foreach (var result in Model)
+    {
+        <li>@result.Name</li>
+        <li>@result.Description</li>
+        <li>@result.Country</li>
+        <li>@result.City</li>
+        <li>@result.Street @result.StreetNumber</li>
+        <li>@result.ZipCode</li>
+        <li>@result.Type</li>
+        <br/>
+    }
+</ul>
+
