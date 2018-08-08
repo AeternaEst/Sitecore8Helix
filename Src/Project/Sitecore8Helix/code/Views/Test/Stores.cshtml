@@ -1,11 +1,12 @@
-﻿@model List<Sitecore8Helix.Website.Models.Store>
+﻿@model Sitecore8Helix.Website.Models.SearchResult<Sitecore8Helix.Website.Models.Store>
 
 <h2>@ViewBag.Title</h2>
 
 <p>@ViewBag.Text</p>
 
+<span>@Model.Hits</span>
 <ul>
-    @foreach (var result in Model)
+    @foreach (var result in Model.Results)
     {
         <li>@result.Name</li>
         <li>@result.Description</li>

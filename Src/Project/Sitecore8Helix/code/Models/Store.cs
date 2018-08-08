@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Sitecore8Helix.Website.Interfaces;
 
 namespace Sitecore8Helix.Website.Models
 {

@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -187,7 +188,13 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\SearchConstants.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Handles\SearchStoresHandle.cs" />
+    <Compile Include="Interfaces\IHandle.cs" />
+    <Compile Include="Interfaces\IQuery.cs" />
+    <Compile Include="Models\SearchResult.cs" />
+    <Compile Include="Models\SearchStoresQuery.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\StoreSearchResultItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -210,7 +217,8 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.Default.example" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
-    <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.Configs.config" />
+    <Content Include="App_Config\Include\ZSitecore8Helix\Unicorn.Content.Configs.config" />
+    <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.Setup.Configs.config" />
     <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.CustomSerializationFolder.config" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

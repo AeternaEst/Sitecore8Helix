@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq;
 using Sitecore.ContentSearch.Utilities;
+using Sitecore8Helix.Website.Handles;
 using Sitecore8Helix.Website.Models;
 
 namespace Sitecore8Helix.Website.Controllers
@@ -25,31 +26,16 @@ namespace Sitecore8Helix.Website.Controllers
             ViewBag.Title = title;
             ViewBag.Text = text;
 
-            var index = ContentSearchManager.GetIndex("sitecore_master_index");
-            List<Store> stores = new List<Store>();
-            using (var searchContext = index.CreateSearchContext())
+            var storesHandle = new SearchStoresHandle();
+
+            var result = storesHandle.Handle(new SearchStoresQuery
             {
-                var query = searchContext.GetQueryable<StoreSearchResultItem>().
-                    Where(item => item.TemplateName == "Store");
+                Language = Sitecore.Context.Language.ToString(),
+                TemplateName = "Store",
+                ContextDatabase = Sitecore.Context.Database.Name
+            });
 
-                var results = query.GetResults();
-                foreach (var result in results.Hits)
-                {
-                    stores.Add(new Store
-                    {
-                        Name = result.Document.StoreName.FirstOrDefault(),
-                        Description = result.Document.Description.FirstOrDefault(),
-                        City = result.Document.City,
-                        Country = result.Document.Country,
-                        Street = result.Document.Street,
-                        StreetNumber = result.Document.StreetNumber,
-                        Type = result.Document.Type,
-                        ZipCode = result.Document.ZipCode
-                    });
-                }
-            }
-
-            return View(stores);
+            return View(result);
         }
     }
 }
