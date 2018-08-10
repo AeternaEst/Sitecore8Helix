@@ -1,8 +1,8 @@
 ﻿---
 ID: "dda285a1-537d-4056-87e0-83731bcd4276"
-Parent: "6e4437fb-a51f-462f-bdbc-a88625961225"
+Parent: "27ecfd3d-bfe6-4f02-905c-ac11e08639be"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Project/Stores Page/Search
+Path: /sitecore/templates/Project/Base/Search Page Base/Search
 DB: master
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"

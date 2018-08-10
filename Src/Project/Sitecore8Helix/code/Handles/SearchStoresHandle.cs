@@ -4,9 +4,11 @@ using System.Linq;
 using System.Web;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq;
+using Sitecore.ContentSearch.Utilities;
 using Sitecore8Helix.Website.Constants;
 using Sitecore8Helix.Website.Interfaces;
 using Sitecore8Helix.Website.Models;
+using FacetValue = Sitecore8Helix.Website.Models.FacetValue;
 
 namespace Sitecore8Helix.Website.Handles
 {
@@ -23,6 +25,11 @@ namespace Sitecore8Helix.Website.Handles
                     Where(item => item.TemplateName == query.TemplateName &&
                                   item.Language == query.Language);
 
+                query.Facets.ForEach(facet =>
+                {
+                    q = q.FacetOn(x => facet.Key, facet.Value);
+                });
+
                 results = q.GetResults();               
             }
 
@@ -38,10 +45,17 @@ namespace Sitecore8Helix.Website.Handles
                 ZipCode = hit.Document.ZipCode
             });
 
+            var facets = results.Facets.Categories.Select(facetResult => new Facet
+            {
+                 Key = facetResult.Name, Values = facetResult.Values.Select(fr =>
+                    new FacetValue { Key = fr.Name, Count = fr.AggregateCount})
+            });
+
             return new SearchResult<Store>
             {
                 Hits = results.TotalSearchResults,
-                Results = stores
+                Results = stores,
+                FacetResults = facets
             };
         }
     }

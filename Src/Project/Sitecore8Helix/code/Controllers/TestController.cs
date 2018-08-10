@@ -8,6 +8,7 @@ using Sitecore.ContentSearch.Linq;
 using Sitecore.ContentSearch.Utilities;
 using Sitecore8Helix.Website.Handles;
 using Sitecore8Helix.Website.Models;
+using Sitecore8Helix.Website.Services;
 
 namespace Sitecore8Helix.Website.Controllers
 {
@@ -26,13 +27,15 @@ namespace Sitecore8Helix.Website.Controllers
             ViewBag.Title = title;
             ViewBag.Text = text;
 
+            var searchService = new SearchService();
             var storesHandle = new SearchStoresHandle();
 
             var result = storesHandle.Handle(new SearchStoresQuery
             {
                 Language = Sitecore.Context.Language.ToString(),
                 TemplateName = "Store",
-                ContextDatabase = Sitecore.Context.Database.Name
+                ContextDatabase = Sitecore.Context.Database.Name,
+                Facets = searchService.GetSelectedFacets(Sitecore.Context.Item)
             });
 
             return View(result);

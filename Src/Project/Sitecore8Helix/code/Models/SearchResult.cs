@@ -10,5 +10,7 @@ namespace Sitecore8Helix.Website.Models
         public int Hits { get; set; }
 
         public IEnumerable<T> Results { get; set; }
+
+        public IEnumerable<Facet> FacetResults { get; set; }
     }
 }

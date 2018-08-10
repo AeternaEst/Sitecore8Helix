@@ -2,7 +2,7 @@
 ID: "9aacf0e5-4c54-42e4-b7e1-16311390d70d"
 Parent: "dda285a1-537d-4056-87e0-83731bcd4276"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Project/Stores Page/Search/Facets
+Path: /sitecore/templates/Project/Base/Search Page Base/Search/Facets
 DB: master
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
