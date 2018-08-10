@@ -218,6 +218,7 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
     <Content Include="App_Config\Include\ZSitecore8Helix\Unicorn.Content.Configs.config" />
+    <Content Include="App_Config\Include\ZSitecore8Helix\Unicorn.System.Configs.config" />
     <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.Setup.Configs.config" />
     <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.CustomSerializationFolder.config" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
@@ -234,7 +235,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

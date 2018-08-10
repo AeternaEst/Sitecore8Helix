@@ -5,6 +5,13 @@ Template: "6e4437fb-a51f-462f-bdbc-a88625961225"
 Path: /sitecore/content/Home/Stores
 DB: master
 SharedFields:
+- ID: "9aacf0e5-4c54-42e4-b7e1-16311390d70d"
+  Hint: Facets
+  Type: Multilist
+  Value: |
+    {0348862A-A85C-45DF-A634-094D13D9B992}
+    {546B5120-E216-469B-9A56-C9AE274DDA43}
+    {F2BE49F8-C626-4E6B-9C5D-89981F2BD320}
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Type: layout
