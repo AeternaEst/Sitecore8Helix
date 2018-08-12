@@ -4,13 +4,13 @@
 
 <p>@ViewBag.Text</p>
 
-<span>Facets</span>
+<p>Facets</p>
 @foreach (var facet in Model.FacetResults)
 {
-    <p>Facet: @facet.Key</p>
+    <span style="margin-left: 20px;"><strong>Facet: @facet.Key</strong></span>
     foreach (var facetValue in facet.Values)
     {
-        <span>Key: @facetValue.Key , Value:@facetValue.Count</span>
+        <span style="margin-left: 20px;">Key: @facetValue.Key , Value:@facetValue.Count</span>
     }
 }
 

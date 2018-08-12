@@ -30,11 +30,10 @@ namespace Sitecore8Helix.Website.Handles
                     q = q.Where(document => document.StoreName.Contains(query.SearchText)
                                         || document.Description.Contains(query.SearchText));
                 }
-
+               
                 //Default filters
                 q = q.Filter(document => document.TemplateName == query.TemplateName &&
                                          document.Language == query.Language);
-                
                 //User applied filters
                 if (query.Filters.Any())
                 {
