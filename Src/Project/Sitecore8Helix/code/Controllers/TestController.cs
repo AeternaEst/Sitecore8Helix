@@ -42,5 +42,10 @@ namespace Sitecore8Helix.Website.Controllers
 
             return View(result);
         }
+
+        public ActionResult Products()
+        {
+            return View();
+        }
     }
 }

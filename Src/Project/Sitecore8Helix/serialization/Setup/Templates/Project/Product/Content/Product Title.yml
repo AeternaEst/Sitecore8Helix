@@ -9,6 +9,9 @@ SharedFields:
   Hint: __Hidden
   Type: Checkbox
   Value: 0
+- ID: "93d1b217-b8f4-462e-babf-68298c9ce667"
+  Hint: __Boost
+  Value: 
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
   Value: "Single-Line Text"

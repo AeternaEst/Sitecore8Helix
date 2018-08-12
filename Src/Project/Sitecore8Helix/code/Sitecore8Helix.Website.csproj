@@ -230,6 +230,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Test\Stores.cshtml" />
+    <Content Include="Views\Test\Products.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
