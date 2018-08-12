@@ -35,7 +35,9 @@ namespace Sitecore8Helix.Website.Controllers
                 Language = Sitecore.Context.Language.ToString(),
                 TemplateName = "Store",
                 ContextDatabase = Sitecore.Context.Database.Name,
-                Facets = searchService.GetSelectedFacets(Sitecore.Context.Item)
+                Facets = searchService.GetSelectedFacets(Sitecore.Context.Item),
+                Filters = searchService.GetSelectedFilters(HttpContext.Request.QueryString),
+                SearchText = HttpContext.Request.QueryString["searchText"]
             });
 
             return View(result);

@@ -8,9 +8,11 @@ namespace Sitecore8Helix.Website.Models
 {
     public class SearchStoresQuery : IQuery
     {
+        public string SearchText { get; set; }
         public string TemplateName { get; set; }
         public string Language { get; set; }
         public string ContextDatabase { get; set; }
         public IEnumerable<KeyValuePair<string, int>> Facets { get; set; }
+        public IEnumerable<KeyValuePair<string, string>> Filters { get; set; }
     }
 }

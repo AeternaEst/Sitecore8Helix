@@ -21,9 +21,24 @@ namespace Sitecore8Helix.Website.Handles
             SearchResults<StoreSearchResultItem> results = null;
             using (var searchContext = index.CreateSearchContext())
             {
-                var q = searchContext.GetQueryable<StoreSearchResultItem>().
-                    Where(item => item.TemplateName == query.TemplateName &&
-                                  item.Language == query.Language);
+                var q = searchContext.GetQueryable<StoreSearchResultItem>();
+
+                //TODO: Boost Name
+                if (!string.IsNullOrEmpty(query.SearchText))
+                {
+                    q = q.Where(document => document.StoreName.Contains(query.SearchText)
+                                        || document.Description.Contains(query.SearchText));
+                }
+
+                //Default filters
+                q = q.Filter(document => document.TemplateName == query.TemplateName &&
+                                         document.Language == query.Language);
+
+                //User applied filters
+                query.Filters.ForEach(filter =>
+                {
+                    q = q.Filter(document => ((IObjectIndexers) document)[filter.Key] == filter.Value);
+                });
 
                 query.Facets.ForEach(facet =>
                 {
