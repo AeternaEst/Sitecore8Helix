@@ -13,6 +13,6 @@ namespace Sitecore8Helix.Website.Models
         public string Language { get; set; }
         public string ContextDatabase { get; set; }
         public IEnumerable<KeyValuePair<string, int>> Facets { get; set; }
-        public IEnumerable<KeyValuePair<string, string>> Filters { get; set; }
+        public IEnumerable<KeyValuePair<string, List<string>>> Filters { get; set; }
     }
 }

@@ -26,16 +26,16 @@ namespace Sitecore8Helix.Website.Services
             return selectedFacets;
         }
 
-        public IEnumerable<KeyValuePair<string, string>> GetSelectedFilters(NameValueCollection queryString)
+        public IEnumerable<KeyValuePair<string, List<string>>> GetSelectedFilters(NameValueCollection queryString)
         {
-            var selectedFilters = new List<KeyValuePair<string, string>>();
+            var selectedFilters = new List<KeyValuePair<string, List<string>>>();
 
             var filters = queryString["Filters"];
 
             if(string.IsNullOrEmpty(filters))
                 return selectedFilters;
 
-            //?Filters=country_s=Denmark|city_s=copenhagen|store_type=retail&searchText=funiture
+            //?Filters=country_s=Denmark,Sweden|city_s=Copenhagen,Lyngby|store_type=Retail,Popup&searchText=funiture
 
             var qFilters = filters.Split(new[] {'|'});
 
@@ -45,7 +45,13 @@ namespace Sitecore8Helix.Website.Services
 
                 if (values.Length == 2)
                 {
-                    selectedFilters.Add(new KeyValuePair<string, string>(values[0], values[1]));
+                    var pair = new KeyValuePair<string, List<string>>(values[0], new List<string>());
+                    var t = values[1].Split(new[] {','});
+                    foreach (var p in t)
+                    {
+                        pair.Value.Add(p);
+                    }
+                    selectedFilters.Add(pair);
                 }
             }
 

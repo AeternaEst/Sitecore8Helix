@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq;
+using Sitecore.ContentSearch.Linq.Utilities;
 using Sitecore.ContentSearch.Utilities;
 using Sitecore8Helix.Website.Constants;
 using Sitecore8Helix.Website.Interfaces;
@@ -33,12 +34,23 @@ namespace Sitecore8Helix.Website.Handles
                 //Default filters
                 q = q.Filter(document => document.TemplateName == query.TemplateName &&
                                          document.Language == query.Language);
-
+                
                 //User applied filters
-                query.Filters.ForEach(filter =>
+                if (query.Filters.Any())
                 {
-                    q = q.Filter(document => ((IObjectIndexers) document)[filter.Key] == filter.Value);
-                });
+                    var predicate = PredicateBuilder.True<StoreSearchResultItem>();
+                    query.Filters.ForEach(filter =>
+                    {
+                        var orPredicate = PredicateBuilder.True<StoreSearchResultItem>();
+                        filter.Value.ForEach(filterValue =>
+                        {
+                            orPredicate = orPredicate.Or(document => ((IObjectIndexers)document)[filter.Key] == filterValue);
+                        });
+                        predicate = predicate.And(orPredicate);
+                    });
+
+                    q = q.Filter(predicate);
+                }
 
                 query.Facets.ForEach(facet =>
                 {
