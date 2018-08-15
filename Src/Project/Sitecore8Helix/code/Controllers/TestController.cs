@@ -45,7 +45,20 @@ namespace Sitecore8Helix.Website.Controllers
 
         public ActionResult Products()
         {
-            return View();
+            var searchService = new SearchService();
+            var productsHandle = new SearchProductsHandle();
+
+            var result = productsHandle.Handle(new SearchProductsQuery
+            {
+                SearchText = HttpContext.Request.QueryString["searchText"],
+                Filters = searchService.GetSelectedFilters(HttpContext.Request.QueryString),
+                TemplateName =  "Product",
+                Language = Sitecore.Context.Language.ToString(),
+                Facets = searchService.GetSelectedFacets(Sitecore.Context.Item),
+                ContextDatabase = Sitecore.Context.Database.Name
+            });
+
+            return View(result);
         }
     }
 }

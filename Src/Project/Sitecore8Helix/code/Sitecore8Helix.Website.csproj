@@ -190,10 +190,14 @@
   <ItemGroup>
     <Compile Include="Constants\SearchConstants.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Handles\SearchProductsHandle.cs" />
     <Compile Include="Handles\SearchStoresHandle.cs" />
     <Compile Include="Interfaces\IHandle.cs" />
     <Compile Include="Interfaces\IQuery.cs" />
     <Compile Include="Models\Facet.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductSearchResultItem.cs" />
+    <Compile Include="Models\SearchProductsQuery.cs" />
     <Compile Include="Models\SearchResult.cs" />
     <Compile Include="Models\SearchStoresQuery.cs" />
     <Compile Include="Models\Store.cs" />
@@ -204,7 +208,9 @@
   <ItemGroup>
     <Content Include="Web.config" />
     <Content Include="App_Config\ConnectionStrings.config" />
-    <Content Include="App_Config\Include\ZSitecore8Helix\settings.config" />
+    <Content Include="App_Config\Include\ZSitecore8Helix\settings.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Include\Rainbow.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.zSharedSecret.config.example" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.UI.config" />
