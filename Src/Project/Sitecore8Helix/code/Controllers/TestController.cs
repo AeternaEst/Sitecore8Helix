@@ -58,7 +58,36 @@ namespace Sitecore8Helix.Website.Controllers
                 ContextDatabase = Sitecore.Context.Database.Name
             });
 
+            var testHandle = new SearchSolrNetProductsHandle();
+            var result2 = testHandle.Handle(new SearchProductsQuery
+            {
+                SearchText = HttpContext.Request.QueryString["searchText"],
+                Filters = searchService.GetSelectedFilters(HttpContext.Request.QueryString),
+                TemplateName = "Product",
+                Language = Sitecore.Context.Language.ToString(),
+                Facets = searchService.GetSelectedFacets(Sitecore.Context.Item),
+                ContextDatabase = Sitecore.Context.Database.Name
+            });
+
             return View(result);
+        }
+
+        public ActionResult SolrNetProducts()
+        {
+            var searchService = new SearchService();
+            var productsHandle = new SearchSolrNetProductsHandle();
+
+            var result = productsHandle.Handle(new SearchProductsQuery
+            {
+                SearchText = HttpContext.Request.QueryString["searchText"],
+                Filters = searchService.GetSelectedFilters(HttpContext.Request.QueryString),
+                TemplateName = "Product",
+                Language = Sitecore.Context.Language.ToString(),
+                Facets = searchService.GetSelectedFacets(Sitecore.Context.Item),
+                ContextDatabase = Sitecore.Context.Database.Name
+            });
+
+            return View("~/Views/Test/Products.cshtml", result);
         }
     }
 }
