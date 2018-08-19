@@ -17,7 +17,7 @@ namespace Sitecore8Helix.Website.Handles
 
             //Text search
             AbstractSolrQuery solrQuery = string.IsNullOrEmpty(query.SearchText) ? SolrQuery.All :
-                new SolrQueryByField("product_title_t", query.SearchText) ||
+                new SolrQueryBoost(new SolrQueryByField("product_title_t", query.SearchText), 2.0) ||
                     new SolrQueryByField("product_description_t", query.SearchText); 
 
             //Default filters that is always applied
@@ -28,12 +28,22 @@ namespace Sitecore8Helix.Website.Handles
                 new SolrNotQuery(new SolrQueryByField("_name", "__Standard Values"))
             };
 
+            string keepFacetName = null;
             //User applied filters
             if (query.Filters.Any())
             {
+                var index = 0;
                 query.Filters.ForEach(filter =>
                 {
-                    filters.Add(new SolrQueryInList(filter.Key, filter.Value));
+                    ISolrQuery t = new SolrQueryInList(filter.Key, filter.Value);
+
+                    if (++index == query.Filters.Count())
+                    {
+                        keepFacetName = filter.Key;
+                        t = new LocalParams.LocalParamsQuery(t, new LocalParams(new Dictionary<string, string> { { "tag", "keepfacet" } }));
+                    }
+
+                    filters.Add(t);
                 });
             }
 
@@ -46,7 +56,8 @@ namespace Sitecore8Helix.Website.Handles
                 var facets = new List<ISolrFacetQuery>();
                 query.Facets.ForEach(facet =>
                 {
-                    facets.Add(new SolrFacetFieldQuery(facet.Key)
+                    var facetPrefix = keepFacetName != null && keepFacetName == facet.Key ? "{!ex=keepfacet}" : string.Empty; 
+                    facets.Add(new SolrFacetFieldQuery(facetPrefix + facet.Key)
                     {
                         MinCount = facet.Value
                     });
