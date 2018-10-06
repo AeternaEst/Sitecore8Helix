@@ -210,6 +210,10 @@
       <Project>{f175bace-bce5-49a2-9359-2d3cd60a3cff}</Project>
       <Name>Sitecore8Helix.Foundation.Search</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Common\code\Sitecore8Helix.Common.csproj">
+      <Project>{480eec0d-bb20-4471-98b7-9304c4ecbd58}</Project>
+      <Name>Sitecore8Helix.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
