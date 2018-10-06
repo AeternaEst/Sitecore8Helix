@@ -1,0 +1,1 @@
+﻿CSS and partial views goes into this project
