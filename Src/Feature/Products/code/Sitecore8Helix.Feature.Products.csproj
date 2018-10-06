@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FE017D3B-B5DD-4780-A66E-7B96F01065D9}</ProjectGuid>
+    <ProjectGuid>{0B2DD6DB-D33B-4149-A8C9-22726D943CCB}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sitecore8Helix.Website</RootNamespace>
-    <AssemblyName>Sitecore8Helix.Website</AssemblyName>
+    <RootNamespace>Sitecore8Helix.Feature.Products</RootNamespace>
+    <AssemblyName>Sitecore8Helix.Feature.Products</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -24,7 +24,6 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,35 +43,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Kamsar.WebConsole, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Kamsar.WebConsole.2.0.0\lib\net40\Kamsar.WebConsole.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Lucene.Net.3.0.3\lib\NET40\Lucene.Net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MicroCHAP, Version=1.2.2.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\MicroCHAP.1.2.2.2\lib\net45\MicroCHAP.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Microsoft.Extensions.DependencyInjection.1.0.0\lib\netstandard1.1\Microsoft.Extensions.DependencyInjection.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\..\..\..\lib\sitecore\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
@@ -80,25 +55,24 @@
       <HintPath>..\..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.ContentSearch.NoReferences.8.2.170407\lib\NET452\Sitecore.ContentSearch.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Rainbow, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Rainbow.Core.2.0.0\lib\net452\Rainbow.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch.Linq, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.ContentSearch.Linq.NoReferences.8.2.170407\lib\NET452\Sitecore.ContentSearch.Linq.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Rainbow.Storage.Sc, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Rainbow.Storage.Sc.2.0.0\lib\net452\Rainbow.Storage.Sc.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch.SolrProvider, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.ContentSearch.SolrProvider.NoReferences.8.2.170407\lib\NET452\Sitecore.ContentSearch.SolrProvider.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Rainbow.Storage.Yaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Rainbow.Storage.Yaml.2.0.0\lib\net452\Rainbow.Storage.Yaml.dll</HintPath>
+    <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Kernel.NoReferences.8.2.170407\lib\NET452\Sitecore.Kernel.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Mvc, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Sitecore.Mvc.NoReferences.8.2.170407\lib\NET452\Sitecore.Mvc.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="SolrNet">
+      <HintPath>..\..\..\..\lib\sitecore\SolrNet.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
@@ -141,75 +115,37 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Unicorn, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Unicorn.Core.4.0.3\lib\net452\Unicorn.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Global.asax" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Handles\SearchProductsHandle.cs" />
+    <Compile Include="Handles\SearchSolrNetProductsHandle.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductSearchResultItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SolrNetIntegration\InitializeSharedSolrProvider.cs" />
+    <Compile Include="SolrNetIntegration\SharedServiceLocator.cs" />
+    <Compile Include="SolrNetIntegration\SharedSolrStartup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
-    <Content Include="App_Config\ConnectionStrings.config" />
-    <Content Include="App_Config\Include\ZSitecore8Helix\settings.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Config\Include\Rainbow.config" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.zSharedSecret.config.example" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.UI.config" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.Remote.config.disabled" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.PowerShell.config" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.Dilithium.config.example" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.Deployed.config.disabled" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.DataProvider.config" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.CustomSerializationFolder.config.example" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.NewItemsOnly.example" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.Dependency.config.example" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.Default.example" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
-    <Content Include="App_Config\Include\ZSitecore8Helix\Unicorn.Content.Configs.config" />
-    <Content Include="App_Config\Include\ZSitecore8Helix\Unicorn.System.Configs.config" />
-    <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.Setup.Configs.config" />
-    <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.CustomSerializationFolder.config" />
-    <None Include="Properties\PublishProfiles\local.pubxml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Test\Test.cshtml" />
-    <Content Include="Views\Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Views\Products\Products.cshtml" />
-    <Content Include="Views\Stores\Stores.cshtml" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Feature\Products\code\Sitecore8Helix.Feature.Products.csproj">
-      <Project>{0b2dd6db-d33b-4149-a8c9-22726d943ccb}</Project>
-      <Name>Sitecore8Helix.Feature.Products</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Feature\Stores\code\Sitecore8Helix.Feature.Stores.csproj">
-      <Project>{7ea085bd-d9e2-479a-89ac-6e946f53bd5b}</Project>
-      <Name>Sitecore8Helix.Feature.Stores</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\IoC\code\Sitecore8Helix.Foundation.IoC.csproj">
-      <Project>{a4bf97ae-d2e6-44a1-a2b7-9216289a21b6}</Project>
-      <Name>Sitecore8Helix.Foundation.IoC</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Search\code\Sitecore8Helix.Foundation.Search.csproj">
       <Project>{f175bace-bce5-49a2-9359-2d3cd60a3cff}</Project>
       <Name>Sitecore8Helix.Foundation.Search</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -224,9 +160,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>56061</DevelopmentServerPort>
+          <DevelopmentServerPort>60177</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:56061/</IISUrl>
+          <IISUrl>http://localhost:60177/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

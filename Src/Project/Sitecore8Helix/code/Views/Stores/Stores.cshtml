@@ -1,0 +1,31 @@
+﻿@model Sitecore8Helix.Foundation.Search.Models.SearchResult<Sitecore8Helix.Feature.Stores.Models.Store>
+
+<h2>@ViewBag.Title</h2>
+
+<p>@ViewBag.Text</p>
+
+<p>Facets</p>
+@foreach (var facet in Model.FacetResults)
+{
+    <span style="margin-left: 20px;"><strong>Facet: @facet.Key</strong></span>
+    foreach (var facetValue in facet.Values)
+    {
+        <span style="margin-left: 20px;">Key: @facetValue.Key , Value:@facetValue.Count</span>
+    }
+}
+
+<span>@Model.Hits</span>
+<ul>
+    @foreach (var result in Model.Results)
+    {
+        <li>@result.Name</li>
+        <li>@result.Description</li>
+        <li>@result.Country</li>
+        <li>@result.City</li>
+        <li>@result.Street @result.StreetNumber</li>
+        <li>@result.ZipCode</li>
+        <li>@result.Type</li>
+        <br/>
+    }
+</ul>
+
