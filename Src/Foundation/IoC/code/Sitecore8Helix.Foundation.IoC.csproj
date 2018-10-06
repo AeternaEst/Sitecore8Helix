@@ -126,7 +126,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyInjection\Registration.cs" />
-    <Compile Include="DependencyInjection\MvcResolver.cs" />
     <Compile Include="Init\InitDependencyInjection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

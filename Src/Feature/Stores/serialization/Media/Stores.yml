@@ -1,0 +1,14 @@
+﻿---
+ID: "813d1eb9-c3c2-4bd6-8a9f-8d4925275bfb"
+Parent: "3d9af5d6-0e37-4cce-b638-a965b9f5ba84"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Feature/Stores
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181006T210926Z
