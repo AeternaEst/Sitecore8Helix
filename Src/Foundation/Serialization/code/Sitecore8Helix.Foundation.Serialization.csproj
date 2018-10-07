@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="ToDo.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,7 +143,7 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn.Helix.config" />
+    <Content Include="App_Config\Include\ZSitecore8Helix\Unicorn.Helix.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -157,7 +157,7 @@
   <ItemGroup>
     <Content Include="Web.config" />
     <Content Include="App_Config\ConnectionStrings.config" />
-    <Content Include="App_Config\Include\ZSitecore8Helix\settings.config">
+    <Content Include="App_Config\Include\Project\z.settings.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Config\Include\Rainbow.config" />
@@ -174,7 +174,14 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.Default.example" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Stores.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Search.config" />
+    <Content Include="App_Config\Include\Project\Project.Sitecore8Helix.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.Content.Configs.config.example" />
+    <Content Include="App_Config\Include\Unicorn.Helix.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Products.config" />
     <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.System.Configs.config.example" />
     <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.Setup.Configs.config.example" />
     <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.CustomSerializationFolder.config.example" />
