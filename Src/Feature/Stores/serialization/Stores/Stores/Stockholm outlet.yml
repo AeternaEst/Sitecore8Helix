@@ -1,22 +1,9 @@
 ﻿---
 ID: "47fe6905-a0cc-4728-b2a1-9ada9a2afde3"
 Parent: "956e9e4b-9455-4e08-b812-b00a19d0693d"
-Template: "62c27c70-b141-40ec-bf29-e0ced9e575f7"
+Template: "3f9e340e-1b4b-4ea7-92f1-cd7a267c94a8"
 Path: /sitecore/content/Global/Stores/Stockholm outlet
 DB: master
-SharedFields:
-- ID: "34892b04-2af3-435a-8400-3047d8d71c3d"
-  Hint: Store Type
-  Value: Outlet
-- ID: "a0510608-38c3-4931-81bf-3bde63c1d97f"
-  Hint: Zip Code
-  Value: 4000
-- ID: "ba5b2ff7-1765-4e85-b50a-343af267ff10"
-  Hint: Street
-  Value: outletgaden
-- ID: "e9119352-b995-438b-94a7-d9421d8cb4ff"
-  Hint: Street Number
-  Value: 17
 Languages:
 - Language: da
   Versions:
@@ -29,18 +16,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
-    - ID: "7a99b056-f121-49f6-b772-f250a655838e"
-      Hint: Country
-      Value: Sverige
-    - ID: "a842fb78-4ec1-4e26-9453-a6325a7e6a2a"
-      Hint: City
-      Value: Stockholm
-    - ID: "c80f0a6a-0eaa-4aef-8afc-c9f314d70f50"
-      Hint: Name
-      Value: Stockholm
-    - ID: "dd87c663-617a-49d7-b269-90798a5ded01"
-      Hint: Description
-      Value: Meget billige møbler designet til unge mennesker
 - Language: en
   Versions:
   - Version: 1
@@ -52,15 +27,3 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
-    - ID: "7a99b056-f121-49f6-b772-f250a655838e"
-      Hint: Country
-      Value: Sweden
-    - ID: "a842fb78-4ec1-4e26-9453-a6325a7e6a2a"
-      Hint: City
-      Value: Stockholm
-    - ID: "c80f0a6a-0eaa-4aef-8afc-c9f314d70f50"
-      Hint: Name
-      Value: Stockholm out
-    - ID: "dd87c663-617a-49d7-b269-90798a5ded01"
-      Hint: Description
-      Value: Very cheap funiture designed for young people

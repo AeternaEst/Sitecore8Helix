@@ -1,0 +1,19 @@
+﻿---
+ID: "27ecfd3d-bfe6-4f02-905c-ac11e08639be"
+Parent: "a5dabf5a-00c4-4286-99ea-5e0bbfe9b9cd"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/Search/_Facets
+DB: master
+SharedFields:
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180810T130225Z

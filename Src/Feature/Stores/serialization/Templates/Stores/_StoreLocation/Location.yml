@@ -1,0 +1,14 @@
+﻿---
+ID: "ea92591e-5d2f-439c-ac75-4aeef86aa969"
+Parent: "aee6619b-06b0-459e-ae14-e25fa9e9d376"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/Stores/_StoreLocation/Location
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181028T205514Z

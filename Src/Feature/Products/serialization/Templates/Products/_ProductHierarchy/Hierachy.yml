@@ -1,0 +1,14 @@
+﻿---
+ID: "f4db58bb-07a1-437d-9458-c35b2cf3b781"
+Parent: "086c5c46-ab7c-42da-9150-95c0e3a6b656"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/Products/_ProductHierarchy/Hierachy
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181028T200533Z

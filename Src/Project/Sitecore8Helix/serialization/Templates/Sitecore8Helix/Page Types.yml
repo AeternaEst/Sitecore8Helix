@@ -1,0 +1,14 @@
+﻿---
+ID: "6d7536e4-1459-43ca-b528-d9276e89095b"
+Parent: "7a492885-146e-4a80-83b4-b48176dfdfde"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/Sitecore8Helix/Page Types
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181028T204858Z
