@@ -1,0 +1,33 @@
+﻿---
+ID: "bb5f3d92-4bf9-4f4d-8fd3-8a22e11d86f1"
+Parent: "3da5a828-fe3d-4e1f-acf3-c6f0b9544d82"
+Template: "3da5a828-fe3d-4e1f-acf3-c6f0b9544d82"
+Path: /sitecore/templates/Project/Sitecore8Helix/Page Types/Home/__Standard Values
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{A5A6B8FC-8D69-4B53-ABA6-C37546451E0C}">
+        <r
+          id="{5FFA058F-D601-47EB-A4CE-327B07BE9D13}"
+          ph="main"
+          uid="{C08A7559-4B78-4DAF-A116-E22ABF1873FD}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181031T203609Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

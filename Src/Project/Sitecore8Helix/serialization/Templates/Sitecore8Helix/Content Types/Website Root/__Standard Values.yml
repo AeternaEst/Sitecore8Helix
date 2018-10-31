@@ -1,0 +1,26 @@
+﻿---
+ID: "2e6f55e4-4a93-4805-93bd-b0e4246acc00"
+Parent: "04363f77-b496-4128-8e8e-9eaf89213cca"
+Template: "04363f77-b496-4128-8e8e-9eaf89213cca"
+Path: /sitecore/templates/Project/Sitecore8Helix/Content Types/Website Root/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {3DA5A828-FE3D-4E1F-ACF3-C6F0B9544D82}
+    {6E4437FB-A51F-462F-BDBC-A88625961225}
+    {545AC02C-7442-485E-90ED-5AA44171DFD7}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181031T203421Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
