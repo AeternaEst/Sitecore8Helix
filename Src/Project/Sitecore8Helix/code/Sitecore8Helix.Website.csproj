@@ -170,14 +170,18 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.Default.example" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
-    <Content Include="App_Config\Include\Feature\Feature.Stores.config" />
-    <Content Include="App_Config\Include\Foundation\Foundation.Search.config" />
-    <Content Include="App_Config\Include\Project\Project.Sitecore8Helix.config">
+    <Content Include="App_Config\Include\Feature\Feature.Stores.Serialization.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Search.Serialization.config" />
+    <Content Include="App_Config\Include\Project\Project.Sitecore8Helix.Serialization.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\Foundation\Foundation.Serialization.config" />
+    <Content Include="App_Config\Include\Project\Project.Common.Serialization.config">
       <SubType>Designer</SubType>
     </Content>
     <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.Content.Configs.config.example" />
     <Content Include="App_Config\Include\Unicorn.Helix.config" />
-    <Content Include="App_Config\Include\Feature\Feature.Products.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Products.Serialization.config" />
     <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.System.Configs.config.example" />
     <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.Setup.Configs.config.example" />
     <None Include="App_Config\Include\ZSitecore8Helix\Unicorn.CustomSerializationFolder.config.example" />
