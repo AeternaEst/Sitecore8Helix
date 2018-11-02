@@ -1,0 +1,18 @@
+﻿---
+ID: "01597ce3-e846-4470-aee5-893704aee939"
+Parent: "87631000-f4ec-41d6-bcba-14e0d2dd4dcd"
+Template: "3da5a828-fe3d-4e1f-acf3-c6f0b9544d82"
+Path: /sitecore/content/Websites/Sitecore8Helix/Home
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181031T203544Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

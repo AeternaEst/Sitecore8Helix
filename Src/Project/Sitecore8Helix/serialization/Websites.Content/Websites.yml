@@ -1,0 +1,18 @@
+﻿---
+ID: "2385fc65-16f0-4061-b5d6-2d6b76808b4c"
+Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
+Template: "a9ede1cf-2a09-4a29-b2e6-950b976890f2"
+Path: /sitecore/content/Websites
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181028T213029Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

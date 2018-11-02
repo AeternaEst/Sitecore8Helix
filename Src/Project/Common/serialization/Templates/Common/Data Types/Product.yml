@@ -1,0 +1,38 @@
+﻿---
+ID: "e756f56f-5ee2-4ed8-8b8b-ff193e9f5be3"
+Parent: "c649fd3e-9928-465d-9a2c-42ba6e12c4bd"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Common/Data Types/Product
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/16x16/star_blue.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {1C4DD4FD-6591-4130-9C5B-8DA4083C443F}
+    {086C5C46-AB7C-42DA-9150-95C0E3A6B656}
+    {4F798445-BEBB-4749-A24C-685F4618A715}
+- ID: "a0cb3965-8884-4c7a-8815-b6b2e5ced162"
+  Hint: __Editors
+  Type: TreelistEx
+  Value: |
+    {CFABCE9D-D34A-4990-8113-FCCF583A16C4}
+    {30723E7D-918F-48D9-8A29-97CBE9951B4B}
+- ID: "d312103c-b36c-4ca5-864a-c85f9abda503"
+  Hint: __Is Bucket
+  Type: Checkbox
+  Value: 0
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180812T151230Z

@@ -1,0 +1,39 @@
+﻿---
+ID: "4164bf3b-b1bb-49f5-9e32-8107ce032d2c"
+Parent: "8e60191a-4c48-4300-aad1-7646aca5ed2b"
+Template: "e756f56f-5ee2-4ed8-8b8b-ff193e9f5be3"
+Path: "/sitecore/content/Global/Products/2018/08/12/15/38/Levis vintage t-shirt"
+DB: master
+SharedFields:
+- ID: "27f1c986-3b7f-4788-838f-a6cf794fa960"
+  Hint: Product Rating
+  Value: 5
+- ID: "5166dd9b-8c88-452a-9f48-aeb54ee2157b"
+  Hint: Product Intro Date
+  Value: 20180811T220000Z
+- ID: "9dafca1d-d618-4616-86b8-a8acd6b28a63"
+  Hint: __Bucket Parent Reference
+  Value: "{376F6C71-8F85-4CC6-8BFE-CDF8878FC896}"
+- ID: "a16c16d6-9717-4c9b-ac5f-7385283d15a6"
+  Hint: Product Price
+  Value: 200
+- ID: "cd329c7d-4749-4f74-a59a-c44d1ecf58f1"
+  Hint: Product Category
+  Value: cloth
+- ID: "ffc42499-a09e-4f36-a2f3-e3d3839a565c"
+  Hint: Product Type
+  Value: "t-shirt"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "053ee4b8-cdb1-4bc7-a516-0820f6e1feaf"
+      Hint: Product Title
+      Value: "Levis vintage t-shirt"
+    - ID: "21fd5d49-db58-49c7-a37f-ef94b6d7b0b0"
+      Hint: Product Description
+      Value: Vintage collection to look oldschool
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180812T153710Z
