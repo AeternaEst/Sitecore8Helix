@@ -1,0 +1,14 @@
+﻿---
+ID: "09667d25-6d70-479f-bc72-d35801c1606e"
+Parent: "5804c241-7778-4b2e-9298-547a163259ce"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/system/Settings/Buckets/Facets/Feature/Stores
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181102T185705Z

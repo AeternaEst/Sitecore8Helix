@@ -1,0 +1,25 @@
+﻿---
+ID: "f2be49f8-c626-4e6b-9c5d-89981f2bd320"
+Parent: "09667d25-6d70-479f-bc72-d35801c1606e"
+Template: "5c125b6d-c481-4c24-b5b9-9a23fe396bf0"
+Path: /sitecore/system/Settings/Buckets/Facets/Feature/Stores/Sitecore8Helix Store Type
+DB: master
+SharedFields:
+- ID: "0e23bb51-c071-41b5-9d83-ac410b89b85a"
+  Hint: Parameters
+  Value: store_type_s
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180808T135626Z
+    - ID: "31ca077f-ef38-4980-8a24-05408031b2bc"
+      Hint: Name
+      Value: Sitecore8Helix Store Type
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
