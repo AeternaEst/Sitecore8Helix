@@ -44,7 +44,7 @@ Languages:
         sitecore\Admin
     - ID: "a2972d49-209d-4329-b9f8-70095f4a0778"
       Hint: Headline
-      Value: Stores Page
+      Value: Stores Page Test
     - ID: "e6034801-52c5-4eb5-945a-3f9bc1d03ef8"
       Hint: Text
-      Value: "Find stores in your area!"
+      Value: "Find stores in your area! Test"
