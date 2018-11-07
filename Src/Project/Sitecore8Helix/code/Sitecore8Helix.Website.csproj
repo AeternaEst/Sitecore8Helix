@@ -181,6 +181,7 @@
     </Content>
     <Content Include="App_Config\Include\Unicorn.Helix.config" />
     <Content Include="App_Config\Include\Feature\Feature.Products.Serialization.config" />
+    <Content Include="App_Config\Include\Feature\Feature.Media.Serialization.config" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Test\Test.cshtml" />
