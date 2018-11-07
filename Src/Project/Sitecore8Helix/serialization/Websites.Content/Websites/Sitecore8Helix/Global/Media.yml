@@ -1,0 +1,14 @@
+﻿---
+ID: "de33b8c8-6cb6-4a09-b7d1-56fb487a3e46"
+Parent: "8258442d-5fc6-4240-944e-be527f02de61"
+Template: "94af9589-a624-4d1c-ac07-7a07804b2dd0"
+Path: /sitecore/content/Websites/Sitecore8Helix/Global/Media
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181107T200747Z

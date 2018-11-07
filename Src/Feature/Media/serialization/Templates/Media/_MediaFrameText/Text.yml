@@ -1,0 +1,14 @@
+﻿---
+ID: "2d2fa211-a53e-404b-8772-fa1508ae45e2"
+Parent: "78abe6d0-8236-4961-a9c3-79f12e381727"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/Media/_MediaFrameText/Text
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181107T193924Z

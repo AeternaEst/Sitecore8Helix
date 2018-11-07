@@ -4,6 +4,31 @@ Parent: "87631000-f4ec-41d6-bcba-14e0d2dd4dcd"
 Template: "3da5a828-fe3d-4e1f-acf3-c6f0b9544d82"
 Path: /sitecore/content/Websites/Sitecore8Helix/Home
 DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{C08A7559-4B78-4DAF-A116-E22ABF1873FD}">
+          <p:d />
+        </r>
+        <r
+          uid="{90268EE7-B642-4D2D-B5DC-8708687411E6}"
+          p:before="*"
+          s:id="{26807B12-7B71-4D18-A81C-2C621CD8CFD3}"
+          s:ph="main" />
+        <r
+          uid="{1D12ADCF-562A-4ECF-86D2-A2BD129C6A77}"
+          p:after="*[1=2]"
+          s:id="{E3BC0677-2F7E-4F10-A85A-9532EA5403CF}"
+          s:ph="simple-grid" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:

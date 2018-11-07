@@ -1,0 +1,23 @@
+﻿---
+ID: "3b8e25da-b763-48f9-ae61-5df3df246ae5"
+Parent: "de33b8c8-6cb6-4a09-b7d1-56fb487a3e46"
+Template: "6f6d914c-8430-47c7-a304-15550e197b29"
+Path: /sitecore/content/Websites/Sitecore8Helix/Global/Media/Sitecore Experience
+DB: master
+SharedFields:
+- ID: "0abe551d-68c0-4cd8-8616-9637a2573af1"
+  Hint: Video Source
+  Value: |
+    <file mediaid="{995767CB-E660-4CFE-87C2-77D24A112BEA}" src="-/media/995767CBE6604CFE87C277D24A112BEA.ashx" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181107T204548Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

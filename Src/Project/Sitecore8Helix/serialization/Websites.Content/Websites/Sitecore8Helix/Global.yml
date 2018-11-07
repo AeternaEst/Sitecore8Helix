@@ -1,0 +1,18 @@
+﻿---
+ID: "8258442d-5fc6-4240-944e-be527f02de61"
+Parent: "87631000-f4ec-41d6-bcba-14e0d2dd4dcd"
+Template: "50b6f223-b4d5-4a05-ac95-a7aa69c72bdf"
+Path: /sitecore/content/Websites/Sitecore8Helix/Global
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181107T195536Z

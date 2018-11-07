@@ -1,16 +1,16 @@
 ﻿---
-ID: "2e6f55e4-4a93-4805-93bd-b0e4246acc00"
-Parent: "04363f77-b496-4128-8e8e-9eaf89213cca"
-Template: "04363f77-b496-4128-8e8e-9eaf89213cca"
-Path: /sitecore/templates/Project/Sitecore8Helix/Content Types/Website Root/__Standard Values
+ID: "7a2e5831-50a7-4f1c-9620-a148c65049f2"
+Parent: "94af9589-a624-4d1c-ac07-7a07804b2dd0"
+Template: "94af9589-a624-4d1c-ac07-7a07804b2dd0"
+Path: /sitecore/templates/Project/Common/Content Types/Folders/Media Folder/__Standard Values
 DB: master
 SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Type: TreelistEx
   Value: |
-    {3DA5A828-FE3D-4E1F-ACF3-C6F0B9544D82}
-    {50B6F223-B4D5-4A05-AC95-A7AA69C72BDF}
+    {AD3D7A5B-15EB-4155-BC9F-71BF94597E30}
+    {6F6D914C-8430-47C7-A304-15550E197B29}
 Languages:
 - Language: en
   Versions:
@@ -18,7 +18,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20181031T203421Z
+      Value: 20181107T200026Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

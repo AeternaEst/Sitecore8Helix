@@ -1,8 +1,8 @@
 ﻿---
-ID: "584628b3-f390-4d89-9932-05eb2baa2b89"
-Parent: "87631000-f4ec-41d6-bcba-14e0d2dd4dcd"
+ID: "1e140398-7ea0-46ec-8a0e-f9073a2b8133"
+Parent: "01597ce3-e846-4470-aee5-893704aee939"
 Template: "545ac02c-7442-485e-90ed-5aa44171dfd7"
-Path: /sitecore/content/Websites/Sitecore8Helix/SolrNetProducts
+Path: /sitecore/content/Websites/Sitecore8Helix/Home/Products
 DB: master
 SharedFields:
 - ID: "9aacf0e5-4c54-42e4-b7e1-16311390d70d"
@@ -24,8 +24,8 @@ SharedFields:
           <p:d />
         </r>
         <r
-          uid="{A9C930AA-E12B-4FE8-8000-D5F32D8664BB}"
-          s:id="{5767D734-FB65-4C5F-BAF5-F42E1E7122B9}"
+          uid="{A407A99E-0EA3-484B-AE62-0FCBED78D33D}"
+          s:id="{DF16920A-B956-42FF-BE41-516A1793DE17}"
           s:ph="main" />
       </d>
     </r>

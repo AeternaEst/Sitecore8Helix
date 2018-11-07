@@ -1,8 +1,8 @@
 ﻿---
 ID: "631368eb-f35c-4b7d-8f02-5cd750a03746"
-Parent: "87631000-f4ec-41d6-bcba-14e0d2dd4dcd"
+Parent: "01597ce3-e846-4470-aee5-893704aee939"
 Template: "6e4437fb-a51f-462f-bdbc-a88625961225"
-Path: /sitecore/content/Websites/Sitecore8Helix/Stores
+Path: /sitecore/content/Websites/Sitecore8Helix/Home/Stores
 DB: master
 SharedFields:
 - ID: "9aacf0e5-4c54-42e4-b7e1-16311390d70d"

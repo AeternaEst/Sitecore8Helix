@@ -1,0 +1,23 @@
+﻿---
+ID: "1cb342bf-75d0-4bb7-a22f-76e6dbe5b447"
+Parent: "de33b8c8-6cb6-4a09-b7d1-56fb487a3e46"
+Template: "ad3d7a5b-15eb-4155-bc9f-71bf94597e30"
+Path: /sitecore/content/Websites/Sitecore8Helix/Global/Media/Blond Wide
+DB: master
+SharedFields:
+- ID: "e66f6bfa-d635-4749-bb46-6c01db7ccf86"
+  Hint: Image Source
+  Value: |
+    <image mediaid="{57285FA2-9F3A-418E-BCB9-7426BF6D04CE}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181107T204515Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

@@ -1,0 +1,25 @@
+﻿---
+ID: "6f6d914c-8430-47c7-a304-15550e197b29"
+Parent: "43d38226-aa5a-40de-b263-3f9ff3ec3ab6"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Common/Content Types/Video Frame
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: People/32x32/movie.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {78ABE6D0-8236-4961-A9C3-79F12E381727}
+    {9F4485A2-0326-48AD-B44B-DCEAFBEADAE0}
+    {59BDF204-C1CD-4B26-B238-F8BE6EEF1579}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181107T194801Z

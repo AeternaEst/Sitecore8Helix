@@ -1,0 +1,14 @@
+﻿---
+ID: "8ec95644-1b7d-414f-9cf1-a250c72f9186"
+Parent: "8b86e194-89a9-4065-a2c4-67e22a3202ba"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/Media/_ImageSource/Image
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181107T194025Z
