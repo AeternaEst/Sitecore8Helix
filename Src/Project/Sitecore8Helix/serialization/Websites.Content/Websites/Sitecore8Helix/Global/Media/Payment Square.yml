@@ -14,6 +14,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "033858d2-b906-4a48-b3f9-9c045421d582"
+      Hint: Title
+      Value: Lorem ipsum dolor sit amet
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20181107T204452Z
@@ -21,3 +24,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "c1911a77-a4d2-4233-866e-8bc598266ea4"
+      Hint: Manchet
+      Value: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat

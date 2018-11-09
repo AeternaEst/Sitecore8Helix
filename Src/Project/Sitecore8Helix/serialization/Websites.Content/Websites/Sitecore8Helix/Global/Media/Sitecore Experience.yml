@@ -9,11 +9,21 @@ SharedFields:
   Hint: Video Source
   Value: |
     <file mediaid="{995767CB-E660-4CFE-87C2-77D24A112BEA}" src="-/media/995767CBE6604CFE87C277D24A112BEA.ashx" />
+- ID: "4b79ac81-0a42-4e92-b3f1-951b0ae32736"
+  Hint: Play Automatically
+  Type: Checkbox
+  Value: 1
+- ID: "a79c5544-3dd1-4dae-800f-1e88bfc02154"
+  Hint: Delay Start By
+  Value: 1000
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "033858d2-b906-4a48-b3f9-9c045421d582"
+      Hint: Title
+      Value: 
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20181107T204548Z
@@ -21,3 +31,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "c1911a77-a4d2-4233-866e-8bc598266ea4"
+      Hint: Manchet
+      Value: 

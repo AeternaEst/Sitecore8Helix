@@ -1,0 +1,13 @@
+﻿@model Sitecore8Helix.Feature.Media.Models.VideoFrame
+    
+<div class="col-md-6">
+    <h3>@Model.Title</h3>
+    <p>@Model.Manchet</p>
+    <span>@Model.DelayStartBy</span>
+    <div class="embed-responsive embed-responsive-16by9">
+        <video class="embed-responsive-item" controls @(Model.StartAutomatically ? "autoplay" : "") 
+               src="@Model.VideoSource"
+               @(!string.IsNullOrEmpty(Model.ThumbnailSource) ? "poster=\"" + Model.ThumbnailSource + "\"" : "")>
+        </video>
+    </div>   
+</div>
