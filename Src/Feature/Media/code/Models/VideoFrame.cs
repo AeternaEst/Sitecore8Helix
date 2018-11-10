@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Glass.Mapper.Sc.Configuration.Attributes;
+using Glass.Mapper.Sc.Configuration.Fluent;
+using Glass.Mapper.Sc.Fields;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Resources.Media;
@@ -9,15 +12,31 @@ using Sitecore8Helix.Feature.Media.Constants;
 
 namespace Sitecore8Helix.Feature.Media.Models
 {
+    [SitecoreType(TemplateId = Templates.VideoOptions.Id)]
     public class VideoFrame : BaseMediaFrame
     {
-        public string VideoSource { get; set; }
+        #region Glassmapper
+        [SitecoreId]
+        public Guid VideoFrameId { get; set; }
 
+        [SitecoreField(FieldId = Templates.VideoSource.Fields.VideoSrcId)]
+        public File Video { get; set; }
+
+        [SitecoreField(FieldId = Templates.VideoOptions.Fields.PlayAutomaticallyId)]
         public bool StartAutomatically { get; set; }
 
+        [SitecoreField(FieldId = Templates.VideoOptions.Fields.DelayStartById)]
         public int DelayStartBy { get; set; }
 
+        [SitecoreField(FieldId = Templates.VideoOptions.Fields.ThumbnailId)]
+        public Image Thumbnail { get; set; }
+        #endregion
+
+        #region Manual Data Mapping
         public string ThumbnailSource { get; set; }
+
+        public string VideoSource { get; set; }
+        #endregion
 
         /// <summary>
         /// Oldschool data mapping without page editor support

@@ -57,3 +57,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "9143b843-148a-412b-8607-ebd19c68c04a"
+      Hint: Test
+      Value: Hello World

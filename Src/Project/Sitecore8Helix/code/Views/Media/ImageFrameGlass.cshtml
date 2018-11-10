@@ -1,0 +1,7 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Sitecore8Helix.Feature.Media.Models.ImageFrame>
+
+<div class="col-md-3">
+    <h3>@Html.Glass().Editable(imageFrame => imageFrame.Title)</h3>
+    <p>@Html.Glass().Editable(imageFrame => imageFrame.Manchet)</p>
+    @Html.Glass().RenderImage(imageFrame => imageFrame.Image, new { @class= "img-fluid img-thumbnail" })
+</div>

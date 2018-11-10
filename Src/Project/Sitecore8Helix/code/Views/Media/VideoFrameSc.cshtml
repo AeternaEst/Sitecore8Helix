@@ -12,9 +12,9 @@
 }
 
 <div class="col-md-6">
-    <h3>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.TitleId.ToString())</h3>
-    <p>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.ManchetId.ToString())</p>
-    <span>@Html.Sitecore().Field(Templates.VideoOptions.Fields.DelayStartById.ToString())</span>
+    <h3>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.TitleId)</h3>
+    <p>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.ManchetId)</p>
+    <span>@Html.Sitecore().Field(Templates.VideoOptions.Fields.DelayStartById)</span>
     <div class="embed-responsive embed-responsive-16by9">
         <video class="embed-responsive-item" controls @(Model["Play Automatically"] == "1" ? "autoplay" : "")
                src="@videoSource"
