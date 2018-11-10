@@ -12,7 +12,7 @@ SharedFields:
 - ID: "4b79ac81-0a42-4e92-b3f1-951b0ae32736"
   Hint: Play Automatically
   Type: Checkbox
-  Value: 1
+  Value: 0
 - ID: "a79c5544-3dd1-4dae-800f-1e88bfc02154"
   Hint: Delay Start By
   Value: 1000

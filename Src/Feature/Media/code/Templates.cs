@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using Sitecore.Data;
 
-namespace Sitecore8Helix.Feature.Media.Constants
+namespace Sitecore8Helix.Feature.Media
 {
     public static class Templates
     {

@@ -1,0 +1,24 @@
+﻿@using Sitecore.Data.Fields
+@using Sitecore.Resources.Media
+@using Sitecore8Helix.Feature.Media;
+@using Sitecore8Helix.Feature.Media.Constants
+@model Sitecore.Data.Items.Item
+   
+@{
+    var ff = (FileField)Model.Fields[Templates.VideoSource.Fields.VideoSrcId];
+    var imf = (ImageField)Model.Fields[Templates.VideoOptions.Fields.ThumbnailId];
+    var videoSource = ff.MediaItem != null ? MediaManager.GetMediaUrl(ff.MediaItem, MediaConstants.GetMediaUrlOptions) : "";
+    var thumbnailSource = imf.MediaItem != null ? MediaManager.GetMediaUrl(imf.MediaItem, MediaConstants.GetMediaUrlOptions) : "";
+}
+
+<div class="col-md-6">
+    <h3>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.TitleId.ToString())</h3>
+    <p>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.ManchetId.ToString())</p>
+    <span>@Html.Sitecore().Field(Templates.VideoOptions.Fields.DelayStartById.ToString())</span>
+    <div class="embed-responsive embed-responsive-16by9">
+        <video class="embed-responsive-item" controls @(Model["Play Automatically"] == "1" ? "autoplay" : "")
+               src="@videoSource"
+               @(!string.IsNullOrEmpty(thumbnailSource) ? "poster=\"" + thumbnailSource + "\"" : "")>
+        </video>
+    </div>   
+</div>

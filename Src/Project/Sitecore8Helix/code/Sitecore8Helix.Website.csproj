@@ -191,9 +191,10 @@
     <Content Include="Views\Products\Products.cshtml" />
     <Content Include="Views\Stores\Stores.cshtml" />
     <Content Include="Views\Common\SimpleGrid.cshtml" />
-    <Content Include="Views\Media\MediaFrame.cshtml" />
     <Content Include="Views\Media\ImageFrame.cshtml" />
     <Content Include="Views\Media\VideoFrame.cshtml" />
+    <Content Include="Views\Media\ImageFrameSc.cshtml" />
+    <Content Include="Views\Media\VideoFrameSc.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,8 @@
+﻿@using Sitecore8Helix.Feature.Media;
+@model Sitecore.Data.Items.Item
+
+<div class="col-md-3">
+    <h3>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.TitleId.ToString(), Model)</h3>
+    <p>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.ManchetId.ToString(), Model)</p>
+    @Html.Sitecore().Field(Templates.ImageSource.Fields.ImageSrcId.ToString(), Model, new { @class = "img-fluid img-thumbnail" })
+</div>
