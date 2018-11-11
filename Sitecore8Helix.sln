@@ -39,6 +39,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore8Helix.Foundation.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore8Helix.Feature.Media", "Src\Feature\Media\code\Sitecore8Helix.Feature.Media.csproj", "{E691A1ED-94DF-4835-87A4-FD2875E86DF6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{CBCF7901-DF61-45A8-B5DD-B359DFD1691E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore8Helix.Foundation.Presentation", "Src\Foundation\Presentation\code\Sitecore8Helix.Foundation.Presentation.csproj", "{AE427D7F-057A-4352-A352-902391917D1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +81,10 @@ Global
 		{E691A1ED-94DF-4835-87A4-FD2875E86DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E691A1ED-94DF-4835-87A4-FD2875E86DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E691A1ED-94DF-4835-87A4-FD2875E86DF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE427D7F-057A-4352-A352-902391917D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE427D7F-057A-4352-A352-902391917D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE427D7F-057A-4352-A352-902391917D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE427D7F-057A-4352-A352-902391917D1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +105,8 @@ Global
 		{BAE1852A-D70F-4D8A-A7F5-F602C37FEC5A} = {49A830EA-0A31-4550-9B47-3BA927076A52}
 		{274B20F0-071A-472E-B907-BB2D1A8F096B} = {BAE1852A-D70F-4D8A-A7F5-F602C37FEC5A}
 		{E691A1ED-94DF-4835-87A4-FD2875E86DF6} = {6B1F7228-0C5B-4A16-B4B5-6383C3B5940D}
+		{CBCF7901-DF61-45A8-B5DD-B359DFD1691E} = {49A830EA-0A31-4550-9B47-3BA927076A52}
+		{AE427D7F-057A-4352-A352-902391917D1A} = {CBCF7901-DF61-45A8-B5DD-B359DFD1691E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9AF208F-F2A7-44FB-AEF2-832686562DF4}

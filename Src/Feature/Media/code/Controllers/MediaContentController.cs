@@ -4,38 +4,40 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Glass.Mapper.Sc.Web.Mvc;
-using Sitecore.Data.Fields;
-using Sitecore.Mvc.Presentation;
 using Sitecore8Helix.Feature.Media.Models;
+using Sitecore8Helix.Foundation.Presentation.Interfaces;
+using Sitecore8Helix.Foundation.Presentation.Models;
+using Sitecore8Helix.Foundation.Presentation.Services;
 
 namespace Sitecore8Helix.Feature.Media.Controllers
 {
     public class MediaContentController : GlassController
     {
+        protected IPresentationService PresentationService;
+
+        public MediaContentController(IPresentationService presentationService)
+        {
+            PresentationService = presentationService;
+        }
 
         public ActionResult MediaFrame()
         {
-            var dataSourceItem = Sitecore.Context.Database.GetItem(RenderingContext.Current.Rendering.DataSource);
-
-            if (dataSourceItem != null)
+            if (DataSourceItem != null)
             {
-                if (dataSourceItem.Template.BaseTemplates.Any(template => template.ID.ToString() == Templates.ImageSource.Id))
-                {
-                    var imageFrameModel = GetDataSourceItem<ImageFrame>();
+                var renderingType = PresentationService.GetRenderingType(GetRenderingParameters<RenderingTypeRenderingParameters>());
 
-                    return View("~/Views/Media/ImageFrameGlass.cshtml", imageFrameModel);
-                    //return View("~/Views/Media/ImageFrameSc.cshtml", dataSourceItem);
-                    //var imageFrameModel = new ImageFrame();
-                    //imageFrameModel.Init(dataSourceItem);
-                    //return View("~/Views/Media/ImageFrame.cshtml", imageFrameModel);
+                if (DataSourceItem.Template.BaseTemplates.Any(template => template.ID.ToString() == Templates.ImageSource.Id))
+                {
+                    var imageFrameModel = PresentationService.GetInitializedModel(renderingType, DataSourceItem,
+                        () => ImageFrame.GetImageFrame(DataSourceItem), () => GetDataSourceItem<ImageFrame>());
+
+                    return View($"~/Views/Media/ImageFrame{renderingType}.cshtml", imageFrameModel);
                 }
 
-                var videoFrameModel = GetDataSourceItem<VideoFrame>();
-                return View("~/Views/Media/VideoFrameGlass.cshtml", videoFrameModel);
-                //return View("~/Views/Media/VideoFrameSc.cshtml", dataSourceItem);
-                //var videoFrameModel = new VideoFrame();
-                //videoFrameModel.Init(dataSourceItem);
-                //return View("~/Views/Media/VideoFrame.cshtml", videoFrameModel);
+                var videoFrameModel = PresentationService.GetInitializedModel(renderingType, DataSourceItem,
+                    () => VideoFrame.GetVideoFrame(DataSourceItem), () => GetDataSourceItem<VideoFrame>());
+
+                return View($"~/Views/Media/VideoFrame{renderingType}.cshtml", videoFrameModel);
             }
 
             return new EmptyResult();

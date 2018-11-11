@@ -23,6 +23,13 @@ namespace Sitecore8Helix.Feature.Media.Models
 
         public string ImageSource { get; set; }
 
+        public static ImageFrame GetImageFrame(Item dataSourceItem)
+        {
+            var imageFrame = new ImageFrame();
+            imageFrame.Init(dataSourceItem);
+            return imageFrame;
+        }
+
         /// <summary>
         /// Oldschool data mapping without page editor support
         /// </summary>

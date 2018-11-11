@@ -38,6 +38,13 @@ namespace Sitecore8Helix.Feature.Media.Models
         public string VideoSource { get; set; }
         #endregion
 
+        public static VideoFrame GetVideoFrame(Item dataSourceItem)
+        {
+            var model = new VideoFrame();
+            model.Init(dataSourceItem);
+            return model;
+        }
+
         /// <summary>
         /// Oldschool data mapping without page editor support
         /// </summary>

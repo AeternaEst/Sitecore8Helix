@@ -1,0 +1,22 @@
+﻿---
+ID: "b9c64d25-ee35-4caf-b211-4278593d95ec"
+Parent: "b3133548-511a-4cf5-be9b-29c5297b61a3"
+Template: "4e2dc2e5-59d3-40a2-b5df-713d0425330d"
+Path: /sitecore/system/Settings/Foundation/Presentation/Rendering Settings/Glass
+DB: master
+SharedFields:
+- ID: "e4c00f91-163e-46e3-8cab-d6684864787b"
+  Hint: Type
+  Value: Glass
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181111T093453Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

@@ -1,0 +1,18 @@
+﻿---
+ID: "adcb2e0d-8f5f-4fa1-a7b7-6e6904a50407"
+Parent: "50b6f223-b4d5-4a05-ac95-a7aa69c72bdf"
+Template: "50b6f223-b4d5-4a05-ac95-a7aa69c72bdf"
+Path: /sitecore/templates/Project/Sitecore8Helix/Content Types/Global Folder/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181107T195255Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

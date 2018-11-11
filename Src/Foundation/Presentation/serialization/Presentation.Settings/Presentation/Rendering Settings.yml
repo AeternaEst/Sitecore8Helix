@@ -1,0 +1,22 @@
+﻿---
+ID: "b3133548-511a-4cf5-be9b-29c5297b61a3"
+Parent: "78c23604-c571-4fe4-918c-8120343e6ce7"
+Template: "14197fff-2867-4e5e-a12a-320bead9ede3"
+Path: /sitecore/system/Settings/Foundation/Presentation/Rendering Settings
+DB: master
+SharedFields:
+- ID: "0666cf36-f023-4090-a995-de85af2bc18f"
+  Hint: Default Rendering Type
+  Value: "{B9C64D25-EE35-4CAF-B211-4278593D95EC}"
+- ID: "bc1bcbaa-e3d1-48c7-be65-5341c630684a"
+  Hint: Always Use Default Rendering
+  Type: Checkbox
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181111T095107Z
