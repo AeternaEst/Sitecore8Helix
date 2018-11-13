@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 using Glass.Mapper.Sc.Configuration.Attributes;
+using Sitecore8Helix.Foundation.Presentation.Models;
 
-namespace Sitecore8Helix.Foundation.Presentation.Models
+namespace Sitecore8Helix.Foundation.Presentation.Interfaces
 {
     [SitecoreType(TemplateId = Templates.ParametersTemplateRenderingType.Id)]
-    public class RenderingTypeRenderingParameters
+    public interface IRenderingTypeRenderingParameters
     {
         [SitecoreId]
-        public Guid Id { get; set; }
+        Guid Id { get; set; }
 
         [SitecoreField(FieldId = Templates.ParametersTemplateRenderingType.Fields.RenderingTypeId)]
-        public RenderingType RenderingType { get; set; }
+        RenderingType RenderingType { get; set; }
     }
 }

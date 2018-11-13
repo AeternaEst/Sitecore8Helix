@@ -1,0 +1,30 @@
+﻿---
+ID: "1dbf6ff2-b12b-4751-9953-b42d3fd40f12"
+Parent: "34265413-c209-47be-b48e-ee331011700d"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: /sitecore/layout/Placeholder Settings/Project/Common/Main
+DB: master
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: main
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Type: TreelistEx
+  Value: |
+    {26807B12-7B71-4D18-A81C-2C621CD8CFD3}
+    {DF16920A-B956-42FF-BE41-516A1793DE17}
+    {5767D734-FB65-4C5F-BAF5-F42E1E7122B9}
+    {CFC95028-B5A9-426B-A05D-966E70368FD2}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181113T155512Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

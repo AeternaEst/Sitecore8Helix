@@ -7,7 +7,16 @@ DB: master
 SharedFields:
 - ID: "13f89250-ad6b-4548-882e-118a12c18094"
   Hint: Parameters Template
-  Value: "{4BE917AF-F7BF-4A73-963E-A65B0AE57E84}"
+  Value: "{EEC3BD3D-9718-48AB-B151-5846F84BE650}"
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: 
+- ID: "94069f66-609c-48b0-8281-521c30fb269d"
+  Hint: Open Properties after Add
+  Value: 1
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "/sitecore/content/Global/Media|query:./ancestor-or-self::*[@@templatekey='website root']/Global/Media"
 - ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
   Hint: Controller Action
   Value: MediaFrame

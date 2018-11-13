@@ -1,7 +1,9 @@
-﻿@model Sitecore8Helix.Feature.Media.Models.ImageFrame
+﻿@using Sitecore8Helix.Feature.Media.Models
+@using Sitecore8Helix.Foundation.Presentation.Interfaces
+@model Sitecore8Helix.Foundation.Presentation.Models.PresentationModel<ImageFrame, IPresentationRenderingParameters>
 
-<div class="col-md-3">
-    <h3>@Model.Title</h3>
-    <p>@Model.Manchet</p>
-    <img class="img-fluid img-thumbnail" src="@Model.ImageSource"/>
+<div class="@Model.RenderingParams.GridSize.Size">
+    <h3>@Model.Data.Title</h3>
+    <p>@Model.Data.Manchet</p>
+    <img class="img-fluid img-thumbnail" src="@Model.Data.ImageSource"/>
 </div>

@@ -1,0 +1,14 @@
+﻿---
+ID: "045e5e53-648a-4e83-83f3-4353d784bbb9"
+Parent: "eec3bd3d-9718-48ab-b151-5846f84be650"
+Template: "eec3bd3d-9718-48ab-b151-5846f84be650"
+Path: /sitecore/templates/Foundation/Presentation/ParametersTemplate_Presentation/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181111T194151Z

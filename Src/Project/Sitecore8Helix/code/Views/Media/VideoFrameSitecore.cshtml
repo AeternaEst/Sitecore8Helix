@@ -2,23 +2,25 @@
 @using Sitecore.Resources.Media
 @using Sitecore8Helix.Feature.Media;
 @using Sitecore8Helix.Feature.Media.Constants
-@model Sitecore.Data.Items.Item
-   
+@using Sitecore.Data.Items
+@using Sitecore8Helix.Foundation.Presentation.Interfaces
+@model Sitecore8Helix.Foundation.Presentation.Models.PresentationModel<Item, IPresentationRenderingParameters>
+
 @{
-    var ff = (FileField)Model.Fields[Templates.VideoSource.Fields.VideoSrcId];
-    var imf = (ImageField)Model.Fields[Templates.VideoOptions.Fields.ThumbnailId];
+    var ff = (FileField)Model.Data.Fields[Templates.VideoSource.Fields.VideoSrcId];
+    var imf = (ImageField)Model.Data.Fields[Templates.VideoOptions.Fields.ThumbnailId];
     var videoSource = ff.MediaItem != null ? MediaManager.GetMediaUrl(ff.MediaItem, MediaConstants.GetMediaUrlOptions) : "";
     var thumbnailSource = imf.MediaItem != null ? MediaManager.GetMediaUrl(imf.MediaItem, MediaConstants.GetMediaUrlOptions) : "";
 }
 
-<div class="col-md-6">
-    <h3>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.TitleId)</h3>
-    <p>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.ManchetId)</p>
-    <span>@Html.Sitecore().Field(Templates.VideoOptions.Fields.DelayStartById)</span>
+
+<div class="@Model.RenderingParams.GridSize.Size">
+    <h3>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.TitleId, Model.Data)</h3>
+    <p>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.ManchetId, Model.Data)</p>
+    <span>@Html.Sitecore().Field(Templates.VideoOptions.Fields.DelayStartById, Model.Data)</span>
     <div class="embed-responsive embed-responsive-16by9">
-        <video class="embed-responsive-item" controls @(Model["Play Automatically"] == "1" ? "autoplay" : "")
+        <video class="embed-responsive-item" controls @(Model.Data["Play Automatically"] == "1" ? "autoplay" : "")
                src="@videoSource"
-               @(!string.IsNullOrEmpty(thumbnailSource) ? "poster=\"" + thumbnailSource + "\"" : "")>
-        </video>
-    </div>   
+               @(!string.IsNullOrEmpty(thumbnailSource) ? "poster=\"" + thumbnailSource + "\"" : "")></video>
+    </div>
 </div>

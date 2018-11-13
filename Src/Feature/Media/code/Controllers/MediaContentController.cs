@@ -24,20 +24,21 @@ namespace Sitecore8Helix.Feature.Media.Controllers
         {
             if (DataSourceItem != null)
             {
-                var renderingType = PresentationService.GetRenderingType(GetRenderingParameters<RenderingTypeRenderingParameters>());
+                var renderingParams = GetRenderingParameters<IPresentationRenderingParameters>();
+                var renderingType = PresentationService.GetRenderingType(renderingParams);
 
                 if (DataSourceItem.Template.BaseTemplates.Any(template => template.ID.ToString() == Templates.ImageSource.Id))
                 {
-                    var imageFrameModel = PresentationService.GetInitializedModel(renderingType, DataSourceItem,
-                        () => ImageFrame.GetImageFrame(DataSourceItem), () => GetDataSourceItem<ImageFrame>());
+                    var imgPresentationModel = PresentationService.GetInitializedModel<ImageFrame, IPresentationRenderingParameters>(
+                        renderingType, DataSourceItem, () => ImageFrame.GetImageFrame(DataSourceItem), () => GetDataSourceItem<ImageFrame>(), renderingParams);
 
-                    return View($"~/Views/Media/ImageFrame{renderingType}.cshtml", imageFrameModel);
+                    return View($"~/Views/Media/ImageFrame{renderingType}.cshtml", imgPresentationModel);
                 }
 
-                var videoFrameModel = PresentationService.GetInitializedModel(renderingType, DataSourceItem,
-                    () => VideoFrame.GetVideoFrame(DataSourceItem), () => GetDataSourceItem<VideoFrame>());
+                var videoPresentationModel = PresentationService.GetInitializedModel<VideoFrame, IPresentationRenderingParameters>(
+                    renderingType, DataSourceItem, () => VideoFrame.GetVideoFrame(DataSourceItem), () => GetDataSourceItem<VideoFrame>(), renderingParams);
 
-                return View($"~/Views/Media/VideoFrame{renderingType}.cshtml", videoFrameModel);
+                return View($"~/Views/Media/VideoFrame{renderingType}.cshtml", videoPresentationModel);
             }
 
             return new EmptyResult();

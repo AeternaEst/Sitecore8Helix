@@ -20,29 +20,56 @@ namespace Sitecore8Helix.Foundation.Presentation.Services
                                                       (_renderingSettings = Sitecore.Context.Database.GetItem(new ID(
                                                       PresentationConstants.RenderingSettings.Id)).ToModel<RenderingSettings>());
 
-        public string GetRenderingType(RenderingTypeRenderingParameters renderingTypeParameters)
+        public string GetRenderingType(IRenderingTypeRenderingParameters renderingTypeRenderingParams)
         {
             Assert.IsNotNull(RenderingSettings, nameof(RenderingSettings));
 
-            if (!RenderingSettings.AlwaysUseDefaultRendering && !string.IsNullOrEmpty(renderingTypeParameters?.RenderingType?.Type))
+            if (!RenderingSettings.AlwaysUseDefaultRendering && !string.IsNullOrEmpty(renderingTypeRenderingParams?.RenderingType?.Type))
             {
-                return renderingTypeParameters.RenderingType.Type;
+                return renderingTypeRenderingParams.RenderingType.Type;
             }
 
             return RenderingSettings.DefaultRenderingType.Type;
         }
 
-        public object GetInitializedModel(string renderingType, Item dataSourceItem, Func<object> fetchClassic, Func<object> fetchGlass)
+        public object GetInitializedModel<T1, T2>(string renderingType, Item dataSourceItem, Func<T1> fetchClassic,
+            Func<T1> fetchGlass, T2 renderingParams)
         {
             switch (renderingType)
             {
                 case "Classic":
-                    return fetchClassic();
+                    var presentationModel = new PresentationModel<T1, T2>();
+                    presentationModel.Data = fetchClassic();
+                    presentationModel.RenderingParams = renderingParams;
+                    return presentationModel; 
                 case "Sitecore":
-                    return dataSourceItem;
+                    var presentationModell = new PresentationModel<Item, T2>();
+                    presentationModell.Data = dataSourceItem;
+                    presentationModell.RenderingParams = renderingParams;
+                    return presentationModell;
                 default:
-                    return fetchGlass();
+                    var presentationModelll = new PresentationModel<T1, T2>();
+                    presentationModelll.Data = fetchGlass();
+                    presentationModelll.RenderingParams = renderingParams;
+                    return presentationModelll;
             }
+        }
+
+        public string GetSimpleGridCssClass(string selection)
+        {
+            switch (selection)
+            {
+                case "25":
+                    return "col-md-3";
+                case "50":
+                    return "col-md-6";
+                case "75":
+                    return "col-md-9";
+                case "100":
+                    return "col-md-12";
+            }
+
+            return default(string);
         }
     }
 }

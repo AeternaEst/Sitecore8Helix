@@ -1,14 +1,14 @@
-﻿@using Glass.Mapper.Sc;
-@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Sitecore8Helix.Feature.Media.Models.VideoFrame>
-    
-<div class="col-md-6">
-    <h3>@Html.Glass().Editable(videoFrame => videoFrame.Title)</h3>
-    <p>@Html.Glass().Editable(videoFrame => videoFrame.Manchet)</p>
-    <span>@Html.Glass().Editable(videoFrame => videoFrame.DelayStartBy)</span>
+﻿@using Sitecore8Helix.Feature.Media.Models
+@using Sitecore8Helix.Foundation.Presentation.Interfaces
+@model Sitecore8Helix.Foundation.Presentation.Models.PresentationModel<VideoFrame, IPresentationRenderingParameters>
+
+<div class="@Model.RenderingParams.GridSize.Size">
+    <h3>@Html.Glass().Editable(Model.Data, videoFrame => videoFrame.Title)</h3>
+    <p>@Html.Glass().Editable(Model.Data, videoFrame => videoFrame.Manchet)</p>
+    <span>@Html.Glass().Editable(Model.Data, videoFrame => videoFrame.DelayStartBy)</span>
     <div class="embed-responsive embed-responsive-16by9">
-        <video class="embed-responsive-item" controls @(Model.StartAutomatically ? "autoplay" : "")
-               src="@Model.Video.Src"
-               @(Model.Thumbnail != null && !string.IsNullOrEmpty(Model.ThumbnailSource) ?
-                     "poster=\"" + Model.Thumbnail.Src + "\"" : "")></video>
+        <video class="embed-responsive-item" controls @(Model.Data.StartAutomatically ? "autoplay" : "")
+               src="@Model.Data.Video.Src"
+               @(Model.Data.Thumbnail != null && !string.IsNullOrEmpty(Model.Data.ThumbnailSource) ? "poster=\"" + Model.Data.Thumbnail.Src + "\"" : "")></video>
     </div>
 </div>

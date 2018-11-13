@@ -1,7 +1,9 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Sitecore8Helix.Feature.Media.Models.ImageFrame>
+﻿@using Sitecore8Helix.Feature.Media.Models
+@using Sitecore8Helix.Foundation.Presentation.Interfaces
+@model Sitecore8Helix.Foundation.Presentation.Models.PresentationModel<ImageFrame, IPresentationRenderingParameters>
 
-<div class="col-md-3">
-    <h3>@Html.Glass().Editable(imageFrame => imageFrame.Title)</h3>
-    <p>@Html.Glass().Editable(imageFrame => imageFrame.Manchet)</p>
-    @Html.Glass().RenderImage(imageFrame => imageFrame.Image, new { @class= "img-fluid img-thumbnail" })
+<div class="@Model.RenderingParams.GridSize.Size">
+    <h3>@Html.Glass().Editable(Model.Data, imageFrame => imageFrame.Title)</h3>
+    <p>@Html.Glass().Editable(Model.Data, imageFrame => imageFrame.Manchet)</p>
+    @Html.Glass().RenderImage(Model.Data, imageFrame => imageFrame.Image, new { @class = "img-fluid img-thumbnail" })
 </div>

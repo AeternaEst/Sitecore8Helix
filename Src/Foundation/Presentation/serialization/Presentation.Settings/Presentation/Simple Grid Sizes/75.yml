@@ -1,0 +1,21 @@
+﻿---
+ID: "2d5eb0c6-1230-46fd-9666-c1ab8832e787"
+Parent: "d944474c-0fb6-4614-a8a1-614831be631a"
+Template: "4efb276a-53d9-4149-8f7f-bf230f508d87"
+Path: /sitecore/system/Settings/Foundation/Presentation/Simple Grid Sizes/75
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: applications/32x32/signpost_add.png
+- ID: "66fc1a1f-8362-4860-a5c1-2070d862b924"
+  Hint: Size
+  Value: "col-md-9"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20181111T193459Z

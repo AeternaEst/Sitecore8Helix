@@ -90,10 +90,14 @@
   <ItemGroup>
     <Compile Include="Constants\PresentationConstants.cs" />
     <Compile Include="Extensions\ItemExtensions.cs" />
+    <Compile Include="Interfaces\IPresentationRenderingParameters.cs" />
     <Compile Include="Interfaces\IPresentationService.cs" />
+    <Compile Include="Interfaces\IRenderingTypeRenderingParameters.cs" />
+    <Compile Include="Interfaces\ISimpleGridSizeRenderingParameters.cs" />
+    <Compile Include="Models\PresentationModel.cs" />
     <Compile Include="Models\RenderingSettings.cs" />
     <Compile Include="Models\RenderingType.cs" />
-    <Compile Include="Models\RenderingTypeRenderingParameters.cs" />
+    <Compile Include="Models\SimpleGridSize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PresentationService.cs" />
     <Compile Include="Templates.cs" />

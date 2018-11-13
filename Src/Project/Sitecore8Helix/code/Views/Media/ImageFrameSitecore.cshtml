@@ -1,8 +1,9 @@
-﻿@using Sitecore8Helix.Feature.Media;
-@model Sitecore.Data.Items.Item
+﻿@using Sitecore8Helix.Feature.Media
+@using Sitecore8Helix.Foundation.Presentation.Interfaces
+@model Sitecore8Helix.Foundation.Presentation.Models.PresentationModel<Sitecore.Data.Items.Item, IPresentationRenderingParameters>
 
-<div class="col-md-3">
-    <h3>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.TitleId, Model)</h3>
-    <p>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.ManchetId, Model)</p>
-    @Html.Sitecore().Field(Templates.ImageSource.Fields.ImageSrcId, Model, new { @class = "img-fluid img-thumbnail" })
+<div class="@Model.RenderingParams.GridSize.Size">
+    <h3>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.TitleId, Model.Data)</h3>
+    <p>@Html.Sitecore().Field(Templates.MediaFrameText.Fields.ManchetId, Model.Data)</p>
+    @Html.Sitecore().Field(Templates.ImageSource.Fields.ImageSrcId, Model.Data, new { @class = "img-fluid img-thumbnail" })
 </div>

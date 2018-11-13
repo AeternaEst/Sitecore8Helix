@@ -38,5 +38,35 @@ namespace Sitecore8Helix.Foundation.Presentation
                 public const string RenderingTypeId = "{8E2FED42-1AA2-4D9E-B72B-3975A889EBBC}";
             }
         }
+
+        public static class ParametersTemplateSimpleGridSize
+        {
+            public const string Id = "{88AE60F7-DD9B-4F24-B84A-B6A44C9A79AC}";
+
+            public static class Fields
+            {
+                public const string SizeId = "{20352E31-4A57-43FB-846F-064B880EC4E9}";
+            }
+        }
+
+        public static class ParametersTemplatePresentation
+        {
+            public const string Id = "{EEC3BD3D-9718-48AB-B151-5846F84BE650}";
+
+            public static class Fields
+            {
+                
+            }
+        }
+
+        public static class SimpleGridSize
+        {
+            public const string Id = "{4EFB276A-53D9-4149-8F7F-BF230F508D87}";
+
+            public static class Fields
+            {
+                public const string SizeId = "{66FC1A1F-8362-4860-A5C1-2070D862B924}";
+            }
+        }
     }
 }

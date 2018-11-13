@@ -11,9 +11,12 @@ namespace Sitecore8Helix.Foundation.Presentation.Interfaces
 {
     public interface IPresentationService
     {
-        object GetInitializedModel(string renderingType, Item dataSourceItem, Func<object> fetchClassic, Func<object> fetchGlass);
+        object GetInitializedModel<T1, T2>(string renderingType, Item dataSourceItem, Func<T1> fetchClassic,
+            Func<T1> fetchGlass, T2 renderingParams);
 
-        string GetRenderingType(RenderingTypeRenderingParameters renderingTypeParameters);
+        string GetRenderingType(IRenderingTypeRenderingParameters renderingTypeRenderingParams);
+
+        string GetSimpleGridCssClass(string selection);
 
         RenderingSettings RenderingSettings { get; }
     }
