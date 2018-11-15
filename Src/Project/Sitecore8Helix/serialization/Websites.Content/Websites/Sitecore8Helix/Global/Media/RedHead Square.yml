@@ -7,8 +7,7 @@ DB: master
 SharedFields:
 - ID: "e66f6bfa-d635-4749-bb46-6c01db7ccf86"
   Hint: Image Source
-  Value: |
-    <image mediaid="{4D1105A7-E11E-4F25-8307-23E67134A931}" />
+  Value: 
 Languages:
 - Language: en
   Versions:

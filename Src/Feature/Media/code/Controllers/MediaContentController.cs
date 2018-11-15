@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Glass.Mapper.Sc.Web.Mvc;
 using Sitecore8Helix.Feature.Media.Models;
+using Sitecore8Helix.Foundation.Presentation.Extensions;
 using Sitecore8Helix.Foundation.Presentation.Interfaces;
 using Sitecore8Helix.Foundation.Presentation.Models;
 using Sitecore8Helix.Foundation.Presentation.Services;
@@ -24,7 +25,8 @@ namespace Sitecore8Helix.Feature.Media.Controllers
         {
             if (DataSourceItem != null)
             {
-                var renderingParams = GetRenderingParameters<IPresentationRenderingParameters>();
+                var renderingParams = GetRenderingParameters<IPresentationRenderingParameters>().
+                    EnsureNotNull<IPresentationRenderingParameters, SimpleGridSize>("GridSize");
                 var renderingType = PresentationService.GetRenderingType(renderingParams);
 
                 if (DataSourceItem.Template.BaseTemplates.Any(template => template.ID.ToString() == Templates.ImageSource.Id))

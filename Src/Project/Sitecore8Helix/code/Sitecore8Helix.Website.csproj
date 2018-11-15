@@ -246,6 +246,10 @@
       <Project>{a4bf97ae-d2e6-44a1-a2b7-9216289a21b6}</Project>
       <Name>Sitecore8Helix.Foundation.IoC</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Presentation\code\Sitecore8Helix.Foundation.Presentation.csproj">
+      <Project>{AE427D7F-057A-4352-A352-902391917D1A}</Project>
+      <Name>Sitecore8Helix.Foundation.Presentation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Search\code\Sitecore8Helix.Foundation.Search.csproj">
       <Project>{f175bace-bce5-49a2-9359-2d3cd60a3cff}</Project>
       <Name>Sitecore8Helix.Foundation.Search</Name>

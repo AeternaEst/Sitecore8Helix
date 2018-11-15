@@ -18,26 +18,19 @@ SharedFields:
           <p:d />
         </r>
         <r
-          uid="{90268EE7-B642-4D2D-B5DC-8708687411E6}"
+          uid="{4C84FFF0-7ACD-4472-8D66-5FB89EA62D30}"
           p:before="*"
           s:id="{26807B12-7B71-4D18-A81C-2C621CD8CFD3}"
           s:ph="main" />
         <r
-          uid="{1D12ADCF-562A-4ECF-86D2-A2BD129C6A77}"
-          p:after="r[@uid='{90268EE7-B642-4D2D-B5DC-8708687411E6}']"
+          uid="{64BDF0C9-7982-4EE8-A543-5BFD2CDC5AC7}"
+          p:after="r[@uid='{4C84FFF0-7ACD-4472-8D66-5FB89EA62D30}']"
           s:ds="{8ED6338C-9085-4765-BEAE-084374BE6EDA}"
           s:id="{E3BC0677-2F7E-4F10-A85A-9532EA5403CF}"
-          s:par="Rendering Type=%7BE2279124-6C98-4EE9-B76D-59D6882E28F7%7D&amp;Size=%7B28CE28D1-F5E8-4130-82B0-1EE78FDAACF6%7D"
+          s:par="Rendering Type=%7BB9C64D25-EE35-4CAF-B211-4278593D95EC%7D&amp;Size"
           s:ph="simple-grid" />
         <r
-          uid="{5815D59A-C770-4050-B8B2-E9BDA4E26B30}"
-          p:after="r[@uid='{1D12ADCF-562A-4ECF-86D2-A2BD129C6A77}']"
-          s:ds="{3B8E25DA-B763-48F9-AE61-5DF3DF246AE5}"
-          s:id="{E3BC0677-2F7E-4F10-A85A-9532EA5403CF}"
-          s:par="Rendering Type=%7BB0DFF48B-1CA3-4C1F-BD27-09660601C4ED%7D&amp;Size=%7BEC5E784B-C522-4C60-AF3B-0E0398E17785%7D"
-          s:ph="simple-grid" />
-        <r
-          uid="{A7A12350-696F-4AF3-B82D-D4729ED53964}"
+          uid="{CC07CC50-BCFA-492D-9F09-5B60872679CF}"
           p:after="*[1=2]"
           s:ds="{A9C21DDD-C404-46E5-89D3-B3D9D4F7627D}"
           s:id="{E3BC0677-2F7E-4F10-A85A-9532EA5403CF}"

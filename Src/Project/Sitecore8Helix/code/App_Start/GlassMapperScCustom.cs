@@ -2,8 +2,10 @@
 using Glass.Mapper.Configuration;
 using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
+using Glass.Mapper.Sc.DataMappers;
 using Glass.Mapper.Sc.IoC;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
+using Sitecore8Helix.Foundation.Presentation.DataMappers;
 
 namespace Sitecore8Helix.Website.App_Start
 {
@@ -13,6 +15,9 @@ namespace Sitecore8Helix.Website.App_Start
 			var config = new Glass.Mapper.Sc.Config();
 
 			var dependencyResolver = new DependencyResolver(config);
+		    dependencyResolver.DataMapperFactory.Insert(0, () => new NotNullImageFieldMapper());
+            //dependencyResolver.DataMapperFactory.Replace<SitecoreFieldImageMapper>(0, () => new NotNullImageFieldMapper());
+            //dependencyResolver.DataMapperFactory.Replace<SitecoreFieldLinkMapper>(0, () => new NotNullLinkFieldMapper());
 			// add any changes to the standard resolver here
 
 			 dependencyResolver.Finalise();

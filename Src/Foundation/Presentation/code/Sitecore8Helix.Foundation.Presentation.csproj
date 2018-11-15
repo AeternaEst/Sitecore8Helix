@@ -89,6 +89,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\PresentationConstants.cs" />
+    <Compile Include="DataMappers\NotNullImageFieldMapper.cs" />
+    <Compile Include="DataMappers\NotNullLinkFieldMapper.cs" />
+    <Compile Include="Extensions\GlassExtensions.cs" />
     <Compile Include="Extensions\ItemExtensions.cs" />
     <Compile Include="Interfaces\IPresentationRenderingParameters.cs" />
     <Compile Include="Interfaces\IPresentationService.cs" />
