@@ -103,49 +103,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Rainbow.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\Unicorn.zSharedSecret.config.example" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\Unicorn.UI.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\Unicorn.Remote.config.disabled" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\Unicorn.PowerShell.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\Unicorn.Dilithium.config.example" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\Unicorn.Deployed.config.disabled" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\Unicorn.DataProvider.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\Unicorn.CustomSerializationFolder.config.example" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.NewItemsOnly.example" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.Dependency.config.example" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.Default.example" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\ZSitecore8Helix\Unicorn.Helix.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Serialization.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

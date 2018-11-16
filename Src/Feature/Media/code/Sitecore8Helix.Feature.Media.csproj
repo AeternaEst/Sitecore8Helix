@@ -118,7 +118,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\Feature\Feature.Media.Serialization.config" />
     <None Include="packages.config" />
+    <Content Include="Views\Media\ImageFrameClassic.cshtml" />
+    <Content Include="Views\Media\ImageFrameGlass.cshtml" />
+    <Content Include="Views\Media\ImageFrameSitecore.cshtml" />
+    <Content Include="Views\Media\VideoFrameClassic.cshtml" />
+    <Content Include="Views\Media\VideoFrameGlass.cshtml" />
+    <Content Include="Views\Media\VideoFrameSitecore.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

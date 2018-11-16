@@ -124,6 +124,13 @@
       <Name>Sitecore8Helix.Foundation.Search</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="App_Config\Include\Feature\Feature.Stores.Serialization.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Stores\Stores.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

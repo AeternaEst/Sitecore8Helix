@@ -190,27 +190,15 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.Default.example" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
-    <Content Include="App_Config\Include\Feature\Feature.Stores.Serialization.config" />
-    <Content Include="App_Config\Include\Foundation\Foundation.Search.Serialization.config" />
     <Content Include="App_Config\Include\Project\Project.Sitecore8Helix.Serialization.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\Include\Foundation\Foundation.Serialization.config" />
-    <Content Include="App_Config\Include\Project\Project.Common.Serialization.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="App_Config\Include\Unicorn.Helix.config" />
-    <Content Include="App_Config\Include\Feature\Feature.Products.Serialization.config" />
-    <Content Include="App_Config\Include\Feature\Feature.Media.Serialization.config" />
     <Content Include="App_Config\Include\z.Glass.Mapper.Sc.ViewRender.config.exclude" />
     <Content Include="App_Config\Include\Glass.Mapper.Sc.Start.config" />
     <Content Include="App_Config\Include\Glass.Mapper.Sc.config" />
     <Content Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
-    <Content Include="App_Config\Include\Foundation\Foundation.Presentation.Serialization.config" />
     <Content Include="App_Config\Include\ZSitecore8Helix\z.Developer.Settings.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Config\Include\Foundation\Foundation.Search.config">
       <SubType>Designer</SubType>
     </Content>
     <None Include="Properties\PublishProfiles\local.pubxml" />
@@ -219,15 +207,6 @@
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Views\Products\Products.cshtml" />
-    <Content Include="Views\Stores\Stores.cshtml" />
-    <Content Include="Views\Common\SimpleGrid.cshtml" />
-    <Content Include="Views\Media\ImageFrameClassic.cshtml" />
-    <Content Include="Views\Media\VideoFrameClassic.cshtml" />
-    <Content Include="Views\Media\ImageFrameSitecore.cshtml" />
-    <Content Include="Views\Media\VideoFrameSitecore.cshtml" />
-    <Content Include="Views\Media\ImageFrameGlass.cshtml" />
-    <Content Include="Views\Media\VideoFrameGlass.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
