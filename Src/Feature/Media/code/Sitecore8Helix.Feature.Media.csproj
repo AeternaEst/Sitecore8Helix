@@ -127,6 +127,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Extensions\code\Sitecore8Helix.Foundation.Extensions.csproj">
+      <Project>{6AFD7B67-E6E8-4581-809B-BCA526582507}</Project>
+      <Name>Sitecore8Helix.Foundation.Extensions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Presentation\code\Sitecore8Helix.Foundation.Presentation.csproj">
       <Project>{ae427d7f-057a-4352-a352-902391917d1a}</Project>
       <Name>Sitecore8Helix.Foundation.Presentation</Name>

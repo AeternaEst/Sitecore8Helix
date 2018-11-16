@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using Glass.Mapper.Sc;
 using Sitecore.Data.Items;
-using Sitecore8Helix.Foundation.Presentation.Constants;
+using Sitecore8Helix.Foundation.Extensions;
 
-namespace Sitecore8Helix.Foundation.Presentation.Extensions
+namespace Sitecore8Helix.Foundation.Extensions.SitecoreExtensions
 {
     public static class ItemExtensions
     {
@@ -15,7 +15,7 @@ namespace Sitecore8Helix.Foundation.Presentation.Extensions
             if (item == null)
                 return null;
 
-            var cacheKey = $"{PresentationConstants.CacheKeys.GlassServiceKey}{Sitecore.Context.Database}";
+            var cacheKey = $"{Constants.CacheKeys.GlassServiceKey}{Sitecore.Context.Database}";
             var glassService = Sitecore.Context.Items[cacheKey] as SitecoreService;
             if (glassService == null)
             {

@@ -12,11 +12,11 @@ using Sitecore8Helix.Feature.Media.Constants;
 
 namespace Sitecore8Helix.Feature.Media.Models
 {
-    [SitecoreType(TemplateId = Templates.ImageSource.Id)]
+    [SitecoreType(TemplateId = Templates.ImageFrame.Id)]
     public class ImageFrame : BaseMediaFrame
     {
         [SitecoreId]
-        public Guid ImageFrameId { get; set; }
+        public Guid Id { get; set; }
 
         [SitecoreField(FieldId = Templates.ImageSource.Fields.ImageSrcId)]
         public Image Image { get; set; }

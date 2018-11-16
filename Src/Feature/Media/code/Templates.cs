@@ -50,5 +50,25 @@ namespace Sitecore8Helix.Feature.Media
                 public const string ThumbnailId = "{421D0A5B-3419-486E-B66C-B12EF9335B67}";
             }
         }
+
+        public static class ImageFrame
+        {
+            public const string Id = "{AD3D7A5B-15EB-4155-BC9F-71BF94597E30}";
+
+            public static class Fields
+            {
+
+            }
+        }
+
+        public static class VideoFrame
+        {
+            public const string Id = "{6F6D914C-8430-47C7-A304-15550E197B29}";
+
+            public static class Fields
+            {
+
+            }
+        }
     }
 }

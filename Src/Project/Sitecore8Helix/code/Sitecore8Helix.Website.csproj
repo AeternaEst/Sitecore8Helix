@@ -242,6 +242,10 @@
       <Project>{7ea085bd-d9e2-479a-89ac-6e946f53bd5b}</Project>
       <Name>Sitecore8Helix.Feature.Stores</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Extensions\code\Sitecore8Helix.Foundation.Extensions.csproj">
+      <Project>{6afd7b67-e6e8-4581-809b-bca526582507}</Project>
+      <Name>Sitecore8Helix.Foundation.Extensions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\IoC\code\Sitecore8Helix.Foundation.IoC.csproj">
       <Project>{a4bf97ae-d2e6-44a1-a2b7-9216289a21b6}</Project>
       <Name>Sitecore8Helix.Foundation.IoC</Name>

@@ -16,8 +16,6 @@ namespace Sitecore8Helix.Website.App_Start
 
 			var dependencyResolver = new DependencyResolver(config);
 		    dependencyResolver.DataMapperFactory.Insert(0, () => new NotNullImageFieldMapper());
-            //dependencyResolver.DataMapperFactory.Replace<SitecoreFieldImageMapper>(0, () => new NotNullImageFieldMapper());
-            //dependencyResolver.DataMapperFactory.Replace<SitecoreFieldLinkMapper>(0, () => new NotNullLinkFieldMapper());
 			// add any changes to the standard resolver here
 
 			 dependencyResolver.Finalise();

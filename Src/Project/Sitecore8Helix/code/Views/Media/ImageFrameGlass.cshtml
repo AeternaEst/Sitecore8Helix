@@ -5,5 +5,5 @@
 <div class="@Model.RenderingParams.GridSize.Size">
     <h3>@Html.Glass().Editable(Model.Data, imageFrame => imageFrame.Title)</h3>
     <p>@Html.Glass().Editable(Model.Data, imageFrame => imageFrame.Manchet)</p>
-    @Html.Glass().RenderImage(Model.Data, imageFrame => imageFrame.Image, new { @class = "img-fluid img-thumbnail" })
+    @Html.Glass().RenderImage(Model.Data, imageFrame => imageFrame.Image, new { @class = "img-fluid img-thumbnail" }, true)
 </div>

@@ -12,7 +12,7 @@ using Sitecore8Helix.Feature.Media.Constants;
 
 namespace Sitecore8Helix.Feature.Media.Models
 {
-    [SitecoreType(TemplateId = Templates.VideoOptions.Id)]
+    [SitecoreType(TemplateId = Templates.VideoFrame.Id)]
     public class VideoFrame : BaseMediaFrame
     {
         #region Glassmapper

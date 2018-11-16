@@ -11,10 +11,5 @@ namespace Sitecore8Helix.Foundation.Presentation.Constants
         {
             public const string Id = "{B3133548-511A-4CF5-BE9B-29C5297B61A3}";
         }
-
-        public static class CacheKeys
-        {
-            public const string GlassServiceKey = "GlassSitecoreService";
-        }
     }
 }

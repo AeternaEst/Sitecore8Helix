@@ -5,8 +5,8 @@ using System.Web;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
+using Sitecore8Helix.Foundation.Extensions.SitecoreExtensions;
 using Sitecore8Helix.Foundation.Presentation.Constants;
-using Sitecore8Helix.Foundation.Presentation.Extensions;
 using Sitecore8Helix.Foundation.Presentation.Interfaces;
 using Sitecore8Helix.Foundation.Presentation.Models;
 

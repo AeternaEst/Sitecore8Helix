@@ -8,12 +8,8 @@ using Sitecore8Helix.Feature.Media.Constants;
 
 namespace Sitecore8Helix.Feature.Media.Models
 {
-    [SitecoreType(TemplateId = Templates.MediaFrameText.Id)]
     public abstract class BaseMediaFrame
     {
-        [SitecoreId]
-        public Guid Id { get; set; }
-
         [SitecoreField(FieldId = Templates.MediaFrameText.Fields.TitleId)]
         public string Title { get; set; }
 
