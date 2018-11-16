@@ -45,6 +45,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore8Helix.Foundation.P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore8Helix.Foundation.Extensions", "Src\Foundation\Extensions\code\Sitecore8Helix.Foundation.Extensions.csproj", "{6AFD7B67-E6E8-4581-809B-BCA526582507}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{C5192614-FC12-43D2-95A2-55D02121DF22}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Src\Project\Sitecore8Helix\code\Properties\PublishProfiles\local.pubxml = Src\Project\Sitecore8Helix\code\Properties\PublishProfiles\local.pubxml
+		Src\Project\Sitecore8Helix\code\Properties\PublishProfiles\local.pubxml.user = Src\Project\Sitecore8Helix\code\Properties\PublishProfiles\local.pubxml.user
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
