@@ -240,6 +240,10 @@
       <Project>{e691a1ed-94df-4835-87a4-fd2875e86df6}</Project>
       <Name>Sitecore8Helix.Feature.Media</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Feature\News\code\Sitecore8Helix.Feature.News.csproj">
+      <Project>{beada6e9-32d5-4f54-a7f4-edb357f849f8}</Project>
+      <Name>Sitecore8Helix.Feature.News</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Feature\Products\code\Sitecore8Helix.Feature.Products.csproj">
       <Project>{0b2dd6db-d33b-4149-a8c9-22726d943ccb}</Project>
       <Name>Sitecore8Helix.Feature.Products</Name>

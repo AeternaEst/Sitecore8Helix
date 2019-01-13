@@ -1,0 +1,14 @@
+﻿---
+ID: "0b381e51-29da-4caa-83cc-e5add1e9fda7"
+Parent: "12bb53a5-f967-4cd0-8be3-215ee251a3d3"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Sitecore8Helix/Page Types/News Article/Content
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190113T105719Z

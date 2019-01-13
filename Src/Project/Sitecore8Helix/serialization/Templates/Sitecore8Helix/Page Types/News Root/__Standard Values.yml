@@ -1,0 +1,23 @@
+﻿---
+ID: "78507332-ab7e-489d-809a-a489b96f2e82"
+Parent: "8182d5c2-53f3-47df-88e2-bd9d8eb88a2f"
+Template: "8182d5c2-53f3-47df-88e2-bd9d8eb88a2f"
+Path: /sitecore/templates/Project/Sitecore8Helix/Page Types/News Root/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{12BB53A5-F967-4CD0-8BE3-215EE251A3D3}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190113T105558Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
