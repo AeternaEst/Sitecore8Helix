@@ -36,6 +36,12 @@ namespace Sitecore8Helix.Foundation.Search.Constants
         {
             public static string FiltersName => "Filters";
             public static string SearchTextName => "searchText";
+            public static string UseSolrNet => "useSolrNet";
+        }
+
+        public static class Items
+        {
+            public static string ProductsSearchPageId => "{1E140398-7EA0-46EC-8A0E-F9073A2B8133}";
         }
     }
 }

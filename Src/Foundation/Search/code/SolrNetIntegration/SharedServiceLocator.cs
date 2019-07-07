@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Web;
 
-namespace Sitecore8Helix.Feature.Products.SolrNetIntegration
+namespace Sitecore8Helix.Foundation.Search.SolrNetIntegration
 {
     public class SharedServiceLocator : IServiceLocator
     {

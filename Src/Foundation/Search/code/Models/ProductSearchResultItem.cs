@@ -7,11 +7,16 @@ using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.SearchTypes;
 using SolrNet.Attributes;
 
-namespace Sitecore8Helix.Feature.Products.Models
+namespace Sitecore8Helix.Foundation.Search.Models
 {
     [DataContract]
     public class ProductSearchResultItem : SearchResultItem
     {
+        [SolrField("pid_s")]
+        [IndexField("pid_s")]
+        [DataMember]
+        public virtual string ProductId { get; set; }
+
         [SolrField("product_title_t")]
         [IndexField("product_title_t")]
         [DataMember]

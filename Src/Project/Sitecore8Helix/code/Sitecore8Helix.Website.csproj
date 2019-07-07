@@ -236,6 +236,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Feature\Cart\code\Sitecore8Helix.Feature.Cart.csproj">
+      <Project>{bedc319c-c7db-42f1-9e7d-5f74cc2f0857}</Project>
+      <Name>Sitecore8Helix.Feature.Cart</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Feature\Media\code\Sitecore8Helix.Feature.Media.csproj">
       <Project>{e691a1ed-94df-4835-87a4-fd2875e86df6}</Project>
       <Name>Sitecore8Helix.Feature.Media</Name>

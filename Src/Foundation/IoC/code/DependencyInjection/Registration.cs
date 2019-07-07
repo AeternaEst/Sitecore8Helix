@@ -14,14 +14,13 @@ namespace Sitecore8Helix.Foundation.IoC.DependencyInjection
 
             #region Assemblies Load
             var foundationSearchAssembly = Assembly.Load("Sitecore8Helix.Foundation.Search");
-            var featureProductsAssembly = Assembly.Load("Sitecore8Helix.Feature.Products");
             var featureStoresAssembly = Assembly.Load("Sitecore8Helix.Feature.Stores");
             var foundationPresentationAssembly = Assembly.Load("Sitecore8Helix.Foundation.Presentation");
             #endregion
 
             #region Handles
-            var searchProductsHandle = featureProductsAssembly.GetType("Sitecore8Helix.Feature.Products.Handles.SearchProductsHandle");
-            var searchSolrNetProductsHandle = featureProductsAssembly.GetType("Sitecore8Helix.Feature.Products.Handles.SearchSolrNetProductsHandle");
+            var searchProductsHandle = foundationSearchAssembly.GetType("Sitecore8Helix.Foundation.Search.Handles.SearchProductsHandle");
+            var searchSolrNetProductsHandle = foundationSearchAssembly.GetType("Sitecore8Helix.Foundation.Search.Handles.SearchSolrNetProductsHandle");
             var searchStoresHandle = featureStoresAssembly.GetType("Sitecore8Helix.Feature.Stores.Handles.SearchStoresHandle");
 
             kernel.Bind(searchProductsHandle).To(searchProductsHandle);

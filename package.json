@@ -1,0 +1,39 @@
+{
+  "name": "sitecore8helix",
+  "version": "1.0.0",
+  "description": "sitecore helix test project",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "npx webpack",
+    "watch": "npx webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AeternaEst/Sitecore8Helix.git"
+  },
+  "author": "Nicholas Lindboe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AeternaEst/Sitecore8Helix/issues"
+  },
+  "homepage": "https://github.com/AeternaEst/Sitecore8Helix#readme",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  }
+}

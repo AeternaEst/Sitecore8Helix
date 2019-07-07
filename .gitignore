@@ -6,3 +6,4 @@ bin/
 Website/
 *.user
 Test-Website/
+node_modules

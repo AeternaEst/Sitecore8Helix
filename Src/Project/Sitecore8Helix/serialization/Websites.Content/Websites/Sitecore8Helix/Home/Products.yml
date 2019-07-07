@@ -25,7 +25,9 @@ SharedFields:
         </r>
         <r
           uid="{A407A99E-0EA3-484B-AE62-0FCBED78D33D}"
+          s:ds=""
           s:id="{DF16920A-B956-42FF-BE41-516A1793DE17}"
+          s:par="Test=Foo"
           s:ph="main" />
       </d>
     </r>

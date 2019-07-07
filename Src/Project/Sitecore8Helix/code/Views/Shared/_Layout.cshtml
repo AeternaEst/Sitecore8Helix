@@ -4,13 +4,53 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Sitecore8Helix</title>
-    
+    <style>
+        .product-list {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .product-list__product {
+            width: 250px;
+        }
+
+        .selected-facets__selected-facet {
+            border: 1px solid black;
+            max-width: 100px;
+            cursor: pointer;
+        }
+
+        .cart {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        .cart__products {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+
+        .cart__product {
+            margin-left: 25px;
+            cursor: pointer;
+        }
+
+        .product-list__product--selected {
+            background-color: aqua;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <h3>Master Layout</h3>
+<div>
+    <h3>Master Layout</h3>
 
-        @Html.Sitecore().Placeholder("main")
-    </div>
+    @Html.Sitecore().Placeholder("main")
+</div>
+
+<script src="~/dist/js/bundle.js"></script>
 </body>
 </html>

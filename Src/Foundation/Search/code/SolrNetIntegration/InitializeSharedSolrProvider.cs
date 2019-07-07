@@ -2,10 +2,10 @@
 using Sitecore.ContentSearch.SolrProvider;
 using Sitecore.ContentSearch.SolrProvider.SolrNetIntegration;
 using Sitecore.Pipelines;
-using Sitecore8Helix.Feature.Products.Models;
+using Sitecore8Helix.Foundation.Search.Models;
 using SolrNet;
 
-namespace Sitecore8Helix.Feature.Products.SolrNetIntegration
+namespace Sitecore8Helix.Foundation.Search.SolrNetIntegration
 {
     public class InitializeSharedSolrProvider
     {

@@ -6,17 +6,16 @@ using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq;
 using Sitecore.ContentSearch.Linq.Utilities;
 using Sitecore.ContentSearch.Utilities;
-using Sitecore8Helix.Feature.Products.Models;
-using Sitecore8Helix.Foundation.Search.Interfaces;
 using Sitecore8Helix.Foundation.Search.Models;
+using Sitecore8Helix.Foundation.Search.Interfaces;
 
-namespace Sitecore8Helix.Feature.Products.Handles
+namespace Sitecore8Helix.Foundation.Search.Handles
 {
     public class SearchProductsHandle : IHandle<SearchQuery, Product, SearchResult<Product>>
     {
         public SearchResult<Product> Handle(SearchQuery query)
         {
-            var index = ContentSearchManager.GetIndex(Foundation.Search.Constants.SearchConstants.Index.GetSearchIndexName(query.ContextDatabase));
+            var index = ContentSearchManager.GetIndex(Constants.SearchConstants.Index.GetSearchIndexName(query.ContextDatabase));
 
             SearchResults<ProductSearchResultItem> results = null;
             using (var searchContext = index.CreateSearchContext())
@@ -77,6 +76,7 @@ namespace Sitecore8Helix.Feature.Products.Handles
                 Hits = results.TotalSearchResults,
                 Results = results.Select(result => new Product
                 {
+                    Id = result.Document.ProductId,
                     Title  = result.Document.Title.First(),
                     Description = result.Document.Description.First(),
                     Type = result.Document.Type,

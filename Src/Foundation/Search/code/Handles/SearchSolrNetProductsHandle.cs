@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Sitecore.ContentSearch.Utilities;
-using Sitecore8Helix.Feature.Products.Models;
-using Sitecore8Helix.Foundation.Search.Interfaces;
 using Sitecore8Helix.Foundation.Search.Models;
+using Sitecore8Helix.Foundation.Search.Interfaces;
+using Sitecore8Helix.Foundation.Search.Utils;
 using SolrNet;
 using SolrNet.Commands.Parameters;
 
-namespace Sitecore8Helix.Feature.Products.Handles
+namespace Sitecore8Helix.Foundation.Search.Handles
 {
     public class SearchSolrNetProductsHandle : IHandle<SearchQuery, Product, SearchResult<Product>>
     {
@@ -51,7 +51,7 @@ namespace Sitecore8Helix.Feature.Products.Handles
             options.FilterQueries = filters;
 
             //Selected facets
-            if (query.Facets.Any())
+            if (query.Facets != null && query.Facets.Any())
             {
                 var facets = new List<ISolrFacetQuery>();
                 query.Facets.ForEach(facet =>
@@ -72,6 +72,7 @@ namespace Sitecore8Helix.Feature.Products.Handles
                 Hits = results.NumFound,
                 Results = results.Select(result => new Product
                 {
+                    Id = result.ProductId,
                     Title = result.Title.First(),
                     Description = result.Description.First(),
                     Type = result.Type,

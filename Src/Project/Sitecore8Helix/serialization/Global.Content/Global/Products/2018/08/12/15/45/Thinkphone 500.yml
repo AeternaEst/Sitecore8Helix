@@ -11,6 +11,9 @@ SharedFields:
 - ID: "5166dd9b-8c88-452a-9f48-aeb54ee2157b"
   Hint: Product Intro Date
   Value: 20180811T220000Z
+- ID: "7c12156c-150c-4e27-8657-d602e59567c4"
+  Hint: Id
+  Value: Product12
 - ID: "9dafca1d-d618-4616-86b8-a8acd6b28a63"
   Hint: __Bucket Parent Reference
   Value: "{376F6C71-8F85-4CC6-8BFE-CDF8878FC896}"
