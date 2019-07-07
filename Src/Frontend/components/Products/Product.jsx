@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import Loader from '../Utils/Loader';
+import Loader from '../Misc/Loader';
 
 const Product = props => {
     const { product, addedProductIds, addToCart, isCartLoading } = props;

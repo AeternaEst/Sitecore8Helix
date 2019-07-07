@@ -1,12 +1,12 @@
 
 const baseCartUrl = `http://sitecore8helix.local/api/cart/`;
 
-const CartApi = function() {
+const CartApi = function () {
     var myHeaders = new Headers();
     myHeaders.append('Content-Type', 'application/json');
     myHeaders.append('Accept', 'application/json');
     return {
-        addToCart: function(productId, callback) {
+        addToCart: function (productId, callback) {
             fetch(`${baseCartUrl}/add`, {
                 method: "POST",
                 headers: myHeaders,
@@ -21,7 +21,7 @@ const CartApi = function() {
                     callback();
                 });
         },
-        removeFromCart: function(productId, callback) {
+        removeFromCart: function (productId) {
             fetch(`${baseCartUrl}/delete`, {
                 method: "POST",
                 headers: myHeaders,
@@ -32,19 +32,19 @@ const CartApi = function() {
                 .then(response => {
                     return response.json()
                 }).then(result => {
-                    callback();
+                    return result;
                 });
         },
-        getCart: function(callback) {
-            fetch(`${baseCartUrl}/get`)
+        getCart: function () {
+            return fetch(`${baseCartUrl}/get`)
                 .then(response => {
                     return response.json();
                 })
                 .then(cart => {
-                    callback(cart)
+                    return cart;
                 });
         }
-    }   
+    }
 };
 
 export default CartApi;

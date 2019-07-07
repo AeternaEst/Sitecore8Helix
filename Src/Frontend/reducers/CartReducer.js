@@ -1,10 +1,10 @@
 import CartApi from '../webApi/CartApi';
 
-const ADD_TO_CART = "ADD_TO_CART";
-const DELETE_FROM_CART = "DELETE_FROM_CART";
-const SET_CART = "SET_CART";
-const GET_CART = "GET_CART";
-const SET_CART_UPDATING = "SET_CART_UPDATING";
+export const ADD_TO_CART = "ADD_TO_CART";
+export const DELETE_FROM_CART = "DELETE_FROM_CART";
+export const SET_CART = "SET_CART";
+export const GET_CART = "GET_CART";
+export const SET_CART_UPDATING = "SET_CART_UPDATING";
 
 export const ADD_TO_CART_ACTION = (productId, callback) => {
     return {
@@ -76,6 +76,8 @@ function CartReducer(state = defaultState, action) {
             }
         case SET_CART_UPDATING:
             const isUpdating = action.isUpdating;
+            console.log("SET_CART_UPDATING");
+            console.log(isUpdating);
             return {
                 ...state,
                 isUpdating
