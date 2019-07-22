@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Web;
 using System.Web.Http;
+using Sitecore.Diagnostics;
 using Sitecore8Helix.Feature.Cart.Models;
 using Sitecore8Helix.Foundation.Search.Constants;
 using Sitecore8Helix.Foundation.Search.Handles;
@@ -19,6 +20,15 @@ namespace Sitecore8Helix.Feature.Cart.Controllers
         public ApiCartController(SearchSolrNetProductsHandle solrNetProductsHandle)
         {
             SolrNetProductsHandle = solrNetProductsHandle;
+        }
+
+        public IHttpActionResult CheckProductAvailability(AvailabilityRequest request)
+        {
+            Assert.ArgumentNotNullOrEmpty(request.ProductId, nameof(request.ProductId));
+            Thread.Sleep(500);
+            var random = new Random();
+            var number = random.Next(10);
+            return Json(new AvailabilityResponse { Available = number <= 5});
         }
 
         public IHttpActionResult Get()

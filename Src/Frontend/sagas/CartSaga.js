@@ -1,11 +1,17 @@
 import "regenerator-runtime/runtime";
-import { put, call, takeLatest } from 'redux-saga/effects';
+import { put, call, takeLatest, takeEvery } from 'redux-saga/effects';
 import { SET_CART_ACTION, SET_CART_UPDATING_ACTION, GET_CART, DELETE_FROM_CART, ADD_TO_CART } from '../reducers/CartReducer';
+import { SET_AVAILABILITY_ERROR_ACTION } from '../reducers/ErrorReducer';
 import CartApi from '../webApi/CartApi';
 
 function* getCart() {
     const cart = yield call(() => CartApi().getCart());
     yield put(SET_CART_ACTION(cart));
+}
+
+function* checkProductAvailability(productId) {
+  const response = yield call(() => CartApi().checkProductAvailability(productId));
+  return response.available;
 }
 
 function* removeFromCart(action) {
@@ -17,13 +23,19 @@ function* removeFromCart(action) {
 
 function* addToCart(action) {
   yield put(SET_CART_UPDATING_ACTION(true));
-  yield call(() => CartApi().addToCart(action.productId));
-  yield getCart();
+  var isAvailable = yield checkProductAvailability(action.productId);
+  if(!isAvailable) {
+    yield put(SET_AVAILABILITY_ERROR_ACTION(true));
+  } else {
+    yield put(SET_AVAILABILITY_ERROR_ACTION(false));
+    yield call(() => CartApi().addToCart(action.productId));
+    yield getCart();
+  }
   yield put(SET_CART_UPDATING_ACTION(false));
 }
 
 export function* CartSaga() {
   yield takeLatest(GET_CART, getCart);
-  yield takeLatest(DELETE_FROM_CART, removeFromCart);
-  yield takeLatest(ADD_TO_CART, addToCart);
+  yield takeEvery(DELETE_FROM_CART, removeFromCart);
+  yield takeEvery(ADD_TO_CART, addToCart);
 }

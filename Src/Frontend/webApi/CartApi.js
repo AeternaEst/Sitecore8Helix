@@ -7,7 +7,7 @@ const CartApi = function () {
     myHeaders.append('Accept', 'application/json');
     return {
         addToCart: function (productId, callback) {
-            fetch(`${baseCartUrl}/add`, {
+            return fetch(`${baseCartUrl}/add`, {
                 method: "POST",
                 headers: myHeaders,
                 body: JSON.stringify({
@@ -42,6 +42,22 @@ const CartApi = function () {
                 })
                 .then(cart => {
                     return cart;
+                });
+        },
+        checkProductAvailability: function (productId) {
+            return fetch(`${baseCartUrl}/checkProductAvailability`, {
+                method: "POST",
+                headers: myHeaders,
+                body: JSON.stringify({
+                    ProductId: productId
+                })
+            })
+                .then(response => {
+                    return response.json()
+                }).then(result => {
+                    console.log("availability response");
+                    console.log(result);
+                    return result;
                 });
         }
     }

@@ -109,6 +109,8 @@
   <ItemGroup>
     <Compile Include="Controllers\ApiCartController.cs" />
     <Compile Include="Models\AddProductRequest.cs" />
+    <Compile Include="Models\AvailabilityRequest.cs" />
+    <Compile Include="Models\AvailabilityResponse.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartProduct.cs" />
     <Compile Include="Models\DeleteProductRequest.cs" />

@@ -13,6 +13,13 @@ class CartContainer extends React.Component {
         this.props.getCart();
     }
 
+    clearCart() {
+        this.props.cart.products.forEach(cartProduct => {
+            const productId = cartProduct.product.id;
+            this.props.deleteProduct(productId);
+        });
+    }
+
     render() {
         if(!this.props.cart) {
             return <Loader message="Loading Cart" />
@@ -27,7 +34,7 @@ class CartContainer extends React.Component {
 
         return (
             <Cart totalPrice={totalPrice} numberOfProducts={numberOfProducts}  cart={this.props.cart} 
-                removeProductFromCart={(productId) => this.props.deleteProduct(productId) } />
+                removeProductFromCart={(productId) => this.props.deleteProduct(productId)} clearCart={() => this.clearCart()} />
         )
     }
 }

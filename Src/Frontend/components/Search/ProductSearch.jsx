@@ -4,6 +4,7 @@ import ProductList from '../Products/ProductList';
 import { ADD_TO_CART_ACTION, SET_CART_ACTION, GET_CART_ACTION, SET_CART_UPDATING_ACTION } from '../../reducers/CartReducer';
 import { connect } from 'react-redux';
 import { mapCartToProductIds } from '../../utils/CartUtils';
+import DisplayErrorsContainer from '../Misc/DisplayErrorsContainer';
 
 const useSolrNet = true;
 const baseSearchUrl = `http://sitecore8helix.local/api/products/search${useSolrNet ? '?useSolrNet=true' : ''}`;
@@ -96,7 +97,10 @@ class ProductSearch extends React.Component {
 
     render() {
         return (<div className="product-search">
-            <Facets facets={this.state.result.facetResults} selectedFacets={this.state.selectedFacets} onFacetSelect={this.onFacetSelect}/>
+            <div className="product-search__meta">
+                <Facets facets={this.state.result.facetResults} selectedFacets={this.state.selectedFacets} onFacetSelect={this.onFacetSelect}/>
+                <DisplayErrorsContainer />
+            </div>
 
             <ProductList products={this.state.result.results} addedProductIds={mapCartToProductIds(this.props.cart)} 
                 addToCart={this.addToCart} isCartLoading={this.props.isCartUpdating} />
