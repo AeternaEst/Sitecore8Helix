@@ -18,11 +18,11 @@ const CartApi = function () {
                 .then(response => {
                     return response.json()
                 }).then(result => {
-                    callback();
+                    return result;
                 });
         },
         removeFromCart: function (productId) {
-            fetch(`${baseCartUrl}/delete`, {
+            return fetch(`${baseCartUrl}/delete`, {
                 method: "POST",
                 headers: myHeaders,
                 body: JSON.stringify({

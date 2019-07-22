@@ -5,7 +5,7 @@ import CartReducer from './CartReducer';
 function RootReducer(state = {}, action) {
     return {
         products: ProductsReducer(state.products, action),
-        cartOverview: CartReducer(state.cart, action)
+        cartOverview: CartReducer(state.cartOverview, action)
     }
 }
 
@@ -14,4 +14,4 @@ const combinedReducers = combineReducers({
     cartOverview: CartReducer
 });
 
-export default combinedReducers;
+export default RootReducer;

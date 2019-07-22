@@ -32,13 +32,7 @@ class ProductSearch extends React.Component {
     }
 
     addToCart(productId) {
-        this.props.setCartUpdating(true);
-        this.props.addToCart(productId, () => {
-            this.props.getCart(cart => {
-                this.props.setCart(cart);
-                this.props.setCartUpdating(false);
-            });
-        });
+        this.props.addToCart(productId);
     }
 
     onFacetSelect(facetKey, facetValue) {
@@ -122,14 +116,8 @@ function mapDispatchToProps(dispatch) {
         addToCart: (productId, callback) => {
             dispatch(ADD_TO_CART_ACTION(productId, callback));
         },
-        setCart: cart => {
-            dispatch(SET_CART_ACTION(cart));
-        },
         getCart: (callback) => {
             dispatch(GET_CART_ACTION(callback));
-        },
-        setCartUpdating: isUpdating => {
-            dispatch(SET_CART_UPDATING_ACTION(isUpdating));
         }
     }
 }

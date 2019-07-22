@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { SET_CART_ACTION, DELETE_FROM_CART_ACTION, GET_CART_ACTION, SET_CART_UPDATING_ACTION } from '../../reducers/CartReducer';
+import { DELETE_FROM_CART_ACTION, GET_CART_ACTION, SET_CART_UPDATING_ACTION } from '../../reducers/CartReducer';
 import Cart from './Cart';
 import Loader from '../Misc/Loader';
 
@@ -14,8 +14,6 @@ class CartContainer extends React.Component {
     }
 
     render() {
-        console.log("render CartContainer");
-        console.log(this.props.isCartUpdating);
         if(!this.props.cart) {
             return <Loader message="Loading Cart" />
         }

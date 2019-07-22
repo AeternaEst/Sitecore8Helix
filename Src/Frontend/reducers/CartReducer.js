@@ -50,24 +50,6 @@ const defaultState = {
 
 function CartReducer(state = defaultState, action) {
     switch (action.type) {
-        case ADD_TO_CART:
-            const api = CartApi();
-            api.addToCart(action.productId, action.callback);
-            return {
-                ...state
-            }
-        case DELETE_FROM_CART:
-            const cartApi = CartApi();
-            cartApi.removeFromCart(action.productId, action.callback);
-            return {
-                ...state
-            }
-        case GET_CART:
-            const a = CartApi();
-            a.getCart(action.setCartCallback);
-            return {
-                ...state
-            }
         case SET_CART:
             const cart = action.cart;
             return {
@@ -76,8 +58,6 @@ function CartReducer(state = defaultState, action) {
             }
         case SET_CART_UPDATING:
             const isUpdating = action.isUpdating;
-            console.log("SET_CART_UPDATING");
-            console.log(isUpdating);
             return {
                 ...state,
                 isUpdating
