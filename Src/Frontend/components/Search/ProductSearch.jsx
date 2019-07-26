@@ -1,7 +1,7 @@
 import React from 'react';
 import Facets  from './Facets';
 import ProductList from '../Products/ProductList';
-import { ADD_TO_CART_ACTION, SET_CART_ACTION, GET_CART_ACTION, SET_CART_UPDATING_ACTION } from '../../reducers/CartReducer';
+import { ADD_TO_CART_ACTION, GET_CART_ACTION } from '../../reducers/CartReducer';
 import { connect } from 'react-redux';
 import { mapCartToProductIds } from '../../utils/CartUtils';
 import DisplayErrorsContainer from '../Misc/DisplayErrorsContainer';
