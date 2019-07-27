@@ -29,6 +29,12 @@
     "redux-saga": "^1.0.5"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.9",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.5",
+    "@types/react-redux": "^7.1.1",
+    "@types/redux": "^3.6.0",
+    "@types/redux-saga": "^0.10.5",
     "awesome-typescript-loader": "^5.2.1",
     "typescript": "^3.5.3",
     "webpack": "^4.32.2",

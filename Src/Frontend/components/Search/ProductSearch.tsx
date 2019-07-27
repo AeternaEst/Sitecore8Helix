@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Facets  from './Facets';
 import ProductList from '../Products/ProductList';
 import { ADD_TO_CART_ACTION, GET_CART_ACTION } from '../../reducers/CartReducer';
@@ -9,7 +9,7 @@ import DisplayErrorsContainer from '../Misc/DisplayErrorsContainer';
 const useSolrNet = true;
 const baseSearchUrl = `http://sitecore8helix.local/api/products/search${useSolrNet ? '?useSolrNet=true' : ''}`;
 
-class ProductSearch extends React.Component {
+class ProductSearch extends React.Component<any, any> {
     constructor(props) {
         super(props);
         this.state = {
