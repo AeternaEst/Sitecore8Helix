@@ -117,11 +117,11 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        addToCart: (productId, callback) => {
-            dispatch(ADD_TO_CART_ACTION(productId, callback));
+        addToCart: (productId) => {
+            dispatch(ADD_TO_CART_ACTION(productId));
         },
-        getCart: (callback) => {
-            dispatch(GET_CART_ACTION(callback));
+        getCart: () => {
+            dispatch(GET_CART_ACTION());
         }
     }
 }

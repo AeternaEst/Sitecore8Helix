@@ -1,4 +1,4 @@
-import CartApi from '../webApi/CartApi';
+import { Cart } from "../types/Cart";
 
 export const ADD_TO_CART = "ADD_TO_CART";
 export const DELETE_FROM_CART = "DELETE_FROM_CART";
@@ -6,49 +6,51 @@ export const SET_CART = "SET_CART";
 export const GET_CART = "GET_CART";
 export const SET_CART_UPDATING = "SET_CART_UPDATING";
 
-export const ADD_TO_CART_ACTION = (productId, callback) => {
+export const ADD_TO_CART_ACTION = (productId: string) => {
     return {
         type: ADD_TO_CART,
-        productId: productId,
-        callback: callback
+        productId: productId
     }
 }
 
-export const DELETE_FROM_CART_ACTION = (productId, callback) => {
+export const DELETE_FROM_CART_ACTION = (productId: string) => {
     return {
         type: DELETE_FROM_CART,
-        productId: productId,
-        callback: callback
+        productId: productId
     }
 }
 
-export const SET_CART_ACTION = cart => {
+export const SET_CART_ACTION = (cart: Cart) => {
     return {
         type: SET_CART,
         cart: cart
     }
 }
 
-export const GET_CART_ACTION = setCartCallback => {
+export const GET_CART_ACTION = () => {
     return {
-        type: GET_CART,
-        setCartCallback: setCartCallback
+        type: GET_CART
     }
 }
 
-export const SET_CART_UPDATING_ACTION = isUpdating => {
+export const SET_CART_UPDATING_ACTION = (isUpdating: boolean) => {
     return {
         type: SET_CART_UPDATING,
         isUpdating: isUpdating
     }
 }
 
-const defaultState = {
-    cart: undefined,
-    isUpdating: false
+export interface CartOverviewState {
+    cart: Cart | undefined;
+    isUpdating: boolean;
 }
 
-function CartReducer(state = defaultState, action) {
+const defaultState: CartOverviewState = {
+    cart: undefined,
+    isUpdating: false
+} 
+
+function CartReducer(state = defaultState, action): CartOverviewState {
     switch (action.type) {
         case SET_CART:
             const cart = action.cart;

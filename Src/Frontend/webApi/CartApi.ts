@@ -1,12 +1,27 @@
+import { Cart } from "../types/Cart";
 
 const baseCartUrl = `http://sitecore8helix.local/api/cart/`;
+
+export interface ProductAvailabilityResponse {
+    available: boolean;
+}
+
+export interface AddToCartResponse {
+    message: string;
+    success: boolean;
+}
+
+export interface RemoveFromCartResponse {
+    message: string;
+    success: boolean;
+}
 
 const CartApi = function () {
     var myHeaders = new Headers();
     myHeaders.append('Content-Type', 'application/json');
     myHeaders.append('Accept', 'application/json');
     return {
-        addToCart: function (productId, callback) {
+        addToCart: function (productId: string) : Promise<AddToCartResponse> {
             return fetch(`${baseCartUrl}/add`, {
                 method: "POST",
                 headers: myHeaders,
@@ -21,7 +36,7 @@ const CartApi = function () {
                     return result;
                 });
         },
-        removeFromCart: function (productId) {
+        removeFromCart: function (productId: string): Promise<RemoveFromCartResponse> {
             return fetch(`${baseCartUrl}/delete`, {
                 method: "POST",
                 headers: myHeaders,
@@ -35,7 +50,7 @@ const CartApi = function () {
                     return result;
                 });
         },
-        getCart: function () {
+        getCart: function (): Promise<Cart> {
             return fetch(`${baseCartUrl}/get`)
                 .then(response => {
                     return response.json();
@@ -44,7 +59,7 @@ const CartApi = function () {
                     return cart;
                 });
         },
-        checkProductAvailability: function (productId) {
+        checkProductAvailability: function (productId: string): Promise<ProductAvailabilityResponse> {
             return fetch(`${baseCartUrl}/checkProductAvailability`, {
                 method: "POST",
                 headers: myHeaders,

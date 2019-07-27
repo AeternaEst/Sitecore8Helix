@@ -2,15 +2,16 @@ import "regenerator-runtime/runtime";
 import { put, call, takeLatest, takeEvery } from 'redux-saga/effects';
 import { SET_CART_ACTION, SET_CART_UPDATING_ACTION, GET_CART, DELETE_FROM_CART, ADD_TO_CART } from '../reducers/CartReducer';
 import { SET_AVAILABILITY_ERROR_ACTION } from '../reducers/ErrorReducer';
-import CartApi from '../webApi/CartApi';
+import CartApi, { ProductAvailabilityResponse } from '../webApi/CartApi';
+import { Cart } from "../types/Cart";
 
 function* getCart() {
-    const cart = yield call(() => CartApi().getCart());
+    const cart: Cart = yield call(() => CartApi().getCart());
     yield put(SET_CART_ACTION(cart));
 }
 
-function* checkProductAvailability(productId) {
-  const response = yield call(() => CartApi().checkProductAvailability(productId));
+function* checkProductAvailability(productId: string) {
+  const response : ProductAvailabilityResponse = yield call(() => CartApi().checkProductAvailability(productId));
   return response.available;
 }
 

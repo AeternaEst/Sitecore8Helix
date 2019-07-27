@@ -1,18 +1,22 @@
 
 export const SET_AVAILABILITY_ERROR = "SET_AVAILABILITY_ERROR";
 
-export const SET_AVAILABILITY_ERROR_ACTION = (hasError) => {
+export const SET_AVAILABILITY_ERROR_ACTION = (hasError: boolean) => {
     return {
         type: SET_AVAILABILITY_ERROR,
         hasError: hasError
     }
 }
 
-const initialState = {
+export interface ErrorState {
+    availabilityError: boolean;
+}
+
+const initialState: ErrorState = {
     availabilityError: false
 }
 
-function ErrorReducer(state = initialState, action) {
+function ErrorReducer(state = initialState, action): ErrorState {
     switch (action.type) {
         case SET_AVAILABILITY_ERROR:
             const hasError = action.hasError;
