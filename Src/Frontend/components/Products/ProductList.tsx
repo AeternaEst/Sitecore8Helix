@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Product from './Product';
 import Loader from '../Misc/Loader';
 

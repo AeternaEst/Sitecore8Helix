@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
 import { DELETE_FROM_CART_ACTION, GET_CART_ACTION, SET_CART_UPDATING_ACTION } from '../../reducers/CartReducer';
 import Cart from './Cart';
 import Loader from '../Misc/Loader';
 
-class CartContainer extends React.Component {
+class CartContainer extends React.Component<any, any> {
     constructor(props) {
         super(props);
     }

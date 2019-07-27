@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import SelectedFacets from './SelectedFacets';
 import { mergeFacets } from '../../utils/SearchUtils';
 
@@ -14,7 +14,7 @@ const Facets = props => {
         <div className="facets">
             {
                 mergedFacets.map(facet => (
-                    <select key={facet.key} multiple name={facet.key} onClick={event => onFacetSelect(facet.key, event.target.value)}>
+                    <select key={facet.key} multiple name={facet.key} onClick={event => onFacetSelect(facet.key, event.currentTarget.value)}>
                         {
                             facet.values.map(facetValue => (
                                 <option key={facetValue.key} value={facetValue.key}>{facetValue.key} ({facetValue.count})

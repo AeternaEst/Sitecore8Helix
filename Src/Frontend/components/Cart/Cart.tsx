@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const Cart = props => {
     const { totalPrice, numberOfProducts, cart, removeProductFromCart, clearCart } = props;
