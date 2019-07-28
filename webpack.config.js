@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,6 +11,16 @@ module.exports = {
         test: /\.(t|j)sx?$/,
         exclude: /node_modules/,
         use: { loader: 'awesome-typescript-loader' }
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          'css-loader', 
+          'sass-loader',
+        ],
       }
     ]
   },
@@ -20,5 +31,13 @@ module.exports = {
     path: __dirname + '/Website/dist/js/',
     publicPath: '/',
     filename: 'bundle.js'
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      
+      filename: '../css/styles.css',
+      chunkFilename: '../css/styles.css',
+      ignoreOrder: false, // Enable to remove warnings about conflicting order
+    }),
+  ],
 };

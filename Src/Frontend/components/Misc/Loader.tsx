@@ -1,6 +1,10 @@
 import * as React from 'react';
 
-const Loader = props => {
+interface LoaderProps {
+    message: string;
+}
+
+const Loader = (props: LoaderProps) => {
     const { message } = props;
     return (
         <div className="loader">

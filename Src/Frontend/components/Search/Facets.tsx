@@ -1,8 +1,14 @@
 import * as React from 'react';
 import SelectedFacets from './SelectedFacets';
 import { mergeFacets } from '../../utils/SearchUtils';
+import { FacetResult } from '../../types/Facets';
+import { SelectedFacetsProps } from './SelectedFacets';
 
-const Facets = props => {
+interface FacetsProps extends SelectedFacetsProps {
+    facets: FacetResult[];
+}
+
+const Facets = (props: FacetsProps) => {
     const { facets, selectedFacets, onFacetSelect } = props;
 
     if(!facets)

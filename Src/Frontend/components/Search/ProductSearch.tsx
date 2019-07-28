@@ -1,19 +1,37 @@
 import * as React from 'react';
 import Facets  from './Facets';
 import ProductList from '../Products/ProductList';
-import { ADD_TO_CART_ACTION, GET_CART_ACTION } from '../../reducers/CartReducer';
+import { ADD_TO_CART_ACTION } from '../../reducers/CartReducer';
 import { connect } from 'react-redux';
 import { mapCartToProductIds } from '../../utils/CartUtils';
 import DisplayErrorsContainer from '../Misc/DisplayErrorsContainer';
+import { Cart } from '../../types/Cart';
+import { SearchResults } from '../../types/SearchResults';
+import { SelectedFacet } from '../../types/Facets';
 
 const useSolrNet = true;
 const baseSearchUrl = `http://sitecore8helix.local/api/products/search${useSolrNet ? '?useSolrNet=true' : ''}`;
 
-class ProductSearch extends React.Component<any, any> {
+interface ProductSearchProps {
+    addToCart: (productId: string) => any;
+    cart: Cart;
+    isCartUpdating: boolean;
+}
+
+interface ProductSearchState {
+    result: SearchResults;
+    selectedFacets: SelectedFacet[];
+}
+
+class ProductSearch extends React.Component<ProductSearchProps, ProductSearchState> {
     constructor(props) {
         super(props);
         this.state = {
-            result: {},
+            result: {
+                facetResults: [],
+                hits: 0,
+                results: []
+            },
             selectedFacets: []
         }
         this.onFacetSelect = this.onFacetSelect.bind(this);
@@ -36,7 +54,7 @@ class ProductSearch extends React.Component<any, any> {
         this.props.addToCart(productId);
     }
 
-    onFacetSelect(facetKey, facetValue) {
+    onFacetSelect(facetKey: string, facetValue: string) {
         console.log(`onFacetSelected: ${facetKey} - ${facetValue}`);
         let currentFacets = this.state.selectedFacets;
         const facetExists = currentFacets.find(target => target.facetKey === facetKey);
@@ -64,7 +82,7 @@ class ProductSearch extends React.Component<any, any> {
         this.searchProducts(currentFacets);
     }
 
-    searchProducts(currentlySelectedFacets) {
+    searchProducts(currentlySelectedFacets: SelectedFacet[]) {
         let searchString = '';
         if(currentlySelectedFacets.length) {
             searchString = `${useSolrNet ? '&Filters=': 'Filters' }`;
@@ -119,9 +137,6 @@ function mapDispatchToProps(dispatch) {
     return {
         addToCart: (productId) => {
             dispatch(ADD_TO_CART_ACTION(productId));
-        },
-        getCart: () => {
-            dispatch(GET_CART_ACTION());
         }
     }
 }

@@ -1,10 +1,18 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { DELETE_FROM_CART_ACTION, GET_CART_ACTION, SET_CART_UPDATING_ACTION } from '../../reducers/CartReducer';
+import { DELETE_FROM_CART_ACTION, GET_CART_ACTION } from '../../reducers/CartReducer';
 import Cart from './Cart';
 import Loader from '../Misc/Loader';
+import { Cart as CartType } from '../../types/Cart';
 
-class CartContainer extends React.Component<any, any> {
+interface CartContainerProps {
+    isCartUpdating: boolean;
+    cart: CartType;
+    deleteProduct: (productId: string) => void;
+    getCart: () => void;
+}
+
+class CartContainer extends React.Component<CartContainerProps> {
     constructor(props) {
         super(props);
     }

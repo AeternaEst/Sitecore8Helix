@@ -1,5 +1,6 @@
+import { Cart } from "../types/Cart";
 
-export function mapCartToProductIds(cart) {
+export function mapCartToProductIds(cart: Cart): string[] | undefined {
     if(!cart) {
         return undefined;
     }

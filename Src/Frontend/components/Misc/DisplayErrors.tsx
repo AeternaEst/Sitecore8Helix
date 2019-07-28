@@ -1,6 +1,11 @@
 import * as React from 'react';
 
-const DisplayErrors = props => {
+interface DisplayErrorsProps {
+    hasAvailabilityError: boolean;
+    cartIsUpdating: boolean;
+}
+
+const DisplayErrors = (props: DisplayErrorsProps) => {
     const { hasAvailabilityError, cartIsUpdating } = props;
     return (
         <div className="display-errors">

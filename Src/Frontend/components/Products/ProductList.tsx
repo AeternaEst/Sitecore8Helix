@@ -1,8 +1,13 @@
 import * as React from 'react';
-import Product from './Product';
+import Product, { ProductPropsBase } from './Product';
 import Loader from '../Misc/Loader';
+import { Product as ProductType } from '../../types/Product';
 
-const ProductList = props => {
+interface ProductListProps extends ProductPropsBase {
+    products: ProductType[];
+}
+
+const ProductList = (props: ProductListProps) => {
     const { products, addedProductIds, addToCart, isCartLoading } = props;
 
     if(!products)

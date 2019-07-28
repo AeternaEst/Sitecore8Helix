@@ -2,8 +2,19 @@ import * as React from 'react';
 import { useState } from 'react';
 import classNames from 'classnames';
 import Loader from '../Misc/Loader';
+import { Product } from '../../types/Product';
 
-const Product = props => {
+export interface ProductPropsBase {
+    addedProductIds: string[] | undefined;
+    addToCart: (productId: string) => void;
+    isCartLoading: boolean;
+}
+
+interface ProductProps extends ProductPropsBase {
+    product: Product;
+}
+
+const Product = (props: ProductProps) => {
     const { product, addedProductIds, addToCart, isCartLoading } = props;
 
     const [isLoading, setIsLoading] = useState(false);

@@ -1,6 +1,12 @@
 import * as React from 'react';
+import { SelectedFacet } from '../../types/Facets';
 
-const SelectedFacets = props => {
+export interface SelectedFacetsProps {
+    selectedFacets: SelectedFacet[];
+    onFacetSelect: (facetKey: string, facetValue: string) => void;
+}
+
+const SelectedFacets = (props: SelectedFacetsProps) => {
     const { selectedFacets, onFacetSelect } = props;
     return (
         <div className="selected-facets">
