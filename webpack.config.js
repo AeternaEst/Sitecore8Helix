@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const globImporter = require('node-sass-glob-importer');
 
 module.exports = {
   mode: 'development',
@@ -19,7 +20,12 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader
           },
           'css-loader', 
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              importer: globImporter()
+            }
+          },
         ],
       }
     ]
