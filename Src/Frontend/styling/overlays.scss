@@ -1,0 +1,13 @@
+
+$z-indexes: (
+  'cookie': 10000,
+  'modal': 5000,
+  'dropdown': 4000,
+  'menus': 3000,
+  'default': 1,
+  'below': -1,
+);
+
+@function z($layer) {
+  @return map-get($z-indexes, $layer);
+}

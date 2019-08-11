@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+@font-face {
+    font-family: "Century Gothic";
+    src: url("/dist/fonts/gothic.woff");
+  }
+
+  @font-face {
+    font-family: "Open Sans Regular";
+    src: url("/dist/fonts/open-sans.woff2");
+  }
+
+body {
+    margin: 0;
+}
+
+@import 'Src/Frontend/components/**/*.scss';
+@import 'Src/Frontend/styling/**/*.scss';
+

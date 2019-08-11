@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width" />
     <title>Sitecore8Helix</title>
     <style>
+
+    @@font-face {
+  font-family: 'MyWebFont';
+  src:  url('myfont.woff2') format('woff2'),
+        url('myfont.woff') format('woff');
+}
+
         .product-list {
             display: flex;
             flex-flow: row wrap;
@@ -52,13 +59,12 @@
         .display-errors {
             color: red;
         }
+
     </style>
     <link type="text/css" rel="stylesheet" href="~/dist/css/styles.css"/>
 </head>
 <body>
 <div>
-    <h3>Master Layout</h3>
-
     @Html.Sitecore().Placeholder("main")
 </div>
 

@@ -1,0 +1,15 @@
+@import "../../styling/colors.scss";
+
+.message {
+    background-color: $light-theme-color;
+    display: flex;
+    justify-content: center;
+}
+
+.message__text {
+    color: $light-text-color;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    margin: 7px 0;
+    text-transform: uppercase;
+}

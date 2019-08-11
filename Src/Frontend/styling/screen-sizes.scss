@@ -1,0 +1,14 @@
+
+$small-screen: 640px;
+$medium-screen: 960px;
+$large-screen: 1280px;
+
+$sizes: (
+    'small': $small-screen,
+    'medium': $medium-screen,
+    'large': $large-screen
+);
+
+@function screen-size($size) {
+    @return map-get($sizes, $size);
+}

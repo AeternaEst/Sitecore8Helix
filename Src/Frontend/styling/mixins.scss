@@ -1,0 +1,10 @@
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin default-box-shadow {
+    box-shadow: 5px 10px #888888;
+}
+

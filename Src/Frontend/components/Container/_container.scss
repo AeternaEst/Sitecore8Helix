@@ -1,0 +1,28 @@
+@import "../../styling/screen-sizes.scss";
+@import "../../styling/colors.scss";
+
+.container--light {
+    background-color: $base-background-color;
+}
+
+.container--default-grey {
+    background-color: $default-grey-color;
+}
+
+.container--light-grey {
+    background-color: $light-grey-color;
+}
+
+.container--dark-grey {
+    background-color: $dark-grey-color;
+}
+
+.container--theme {
+    background-color: $default-theme-color;
+}
+
+.container__content {
+    max-width: screen-size('large');
+    margin-left: auto;
+    margin-right: auto;
+}

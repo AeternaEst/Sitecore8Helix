@@ -1,0 +1,19 @@
+$headline-font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'sans-serif';
+$text-font-family: 'Open Sans Regular', 'CenturyGothic', 'AppleGothic', 'sans-serif';
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $headline-font-family;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2, h3, h4, h5, h6 {
+    font-size: 2rem;
+}

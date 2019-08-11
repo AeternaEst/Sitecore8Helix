@@ -1,0 +1,42 @@
+@import "../../styling/screen-sizes.scss";
+@import "../../styling/colors.scss";
+
+.split-container {
+    display: flex;
+}
+
+.split-container__edge {
+    flex-grow: 1;
+}
+
+.split-container__left-content--fifty-fifty, .split-container__right-content--fifty-fifty {
+    flex-basis: 640px;
+}
+
+.split-container__left-content--eigthy-twenty {
+    flex-basis: 900px;
+}
+
+.split-container__right-content--eigthy-twenty {
+    flex-basis: 380px;
+}
+
+.split-container__edge--light, .split-container__content--light {
+    background-color: $base-background-color;
+}
+
+.split-container__edge--default-grey, .split-container__content--default-grey {
+    background-color: $default-grey-color;
+}
+
+.split-container__edge--light-grey .split-container__content--light-grey {
+    background-color: $light-grey-color;
+}
+
+.split-container__edge--dark-grey, .split-container__content--dark-grey {
+    background-color: $dark-grey-color;
+}
+
+.split-container__edge--theme, .split-container__content--theme {
+    background-color: $default-theme-color;
+}

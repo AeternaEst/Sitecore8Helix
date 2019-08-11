@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const globImporter = require('node-sass-glob-importer');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -44,6 +45,9 @@ module.exports = {
       filename: '../css/styles.css',
       chunkFilename: '../css/styles.css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
-    }),
+    }), new CopyPlugin([
+      { from: path.resolve(__dirname, 'Src/Frontend/fonts'), to: path.resolve(__dirname, 'Website/dist/fonts') },
+      { from: path.resolve(__dirname, 'Src/Frontend/images'), to: path.resolve(__dirname, 'Website/dist/images') }
+    ])
   ],
 };

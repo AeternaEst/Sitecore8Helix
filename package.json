@@ -36,6 +36,7 @@
     "@types/redux": "^3.6.0",
     "@types/redux-saga": "^0.10.5",
     "awesome-typescript-loader": "^5.2.1",
+    "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.1.0",
     "gulp": "^4.0.2",
     "mini-css-extract-plugin": "^0.8.0",
