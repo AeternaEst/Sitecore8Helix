@@ -14,7 +14,7 @@ interface ProductProps extends ProductPropsBase {
     product: Product;
 }
 
-const Product = (props: ProductProps) => {
+const Product = (props: ProductProps): React.ReactElement => {
     const { product, addedProductIds, addToCart, isCartLoading } = props;
 
     const [isLoading, setIsLoading] = useState(false);
@@ -41,7 +41,7 @@ const Product = (props: ProductProps) => {
                         <li>{product.type}</li>
                         <li>{product.introDate}</li>
                     </ul>
-                    <button onClick={() => { setIsLoading(true); addToCart(product.id)}}>Add To Cart</button>
+                    <button onClick={(): void => { setIsLoading(true); addToCart(product.id)}}>Add To Cart</button>
                     </>
                 )
             }

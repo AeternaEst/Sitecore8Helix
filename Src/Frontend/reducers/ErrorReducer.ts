@@ -1,7 +1,8 @@
+import { AnyAction } from "redux";
 
 export const SET_AVAILABILITY_ERROR = "SET_AVAILABILITY_ERROR";
 
-export const SET_AVAILABILITY_ERROR_ACTION = (hasError: boolean) => {
+export const SET_AVAILABILITY_ERROR_ACTION = (hasError: boolean): AnyAction => {
     return {
         type: SET_AVAILABILITY_ERROR,
         hasError: hasError
@@ -19,10 +20,9 @@ const initialState: ErrorState = {
 function ErrorReducer(state = initialState, action): ErrorState {
     switch (action.type) {
     case SET_AVAILABILITY_ERROR:
-        const hasError = action.hasError;
         return {
             ...state,
-            availabilityError: hasError
+            availabilityError: action.hasError
         }
     default:
         return state;

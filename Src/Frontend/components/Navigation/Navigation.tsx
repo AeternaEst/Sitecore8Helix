@@ -4,7 +4,7 @@ import { ContainerBackground } from '../../types/Backgrounds';
 import { NavigationProps } from './navigation-types';
 import * as classNames from 'classnames';
 
-const Navigation = (props: NavigationProps) => {
+const Navigation = (props: NavigationProps): React.ReactElement => {
     const { menuItems } = props;
     return (
         <div className="navigation">
@@ -15,7 +15,7 @@ const Navigation = (props: NavigationProps) => {
                 <ul className="navigation__list">
                     {
                         menuItems.map(menuItem => (
-                            <li className="navigation__item">
+                            <li key ={menuItem.name} className="navigation__item">
                                 <a href={menuItem.link}>{menuItem.name}</a>
                                 <div className="submenu">
                                     <SplitContainer
@@ -23,15 +23,15 @@ const Navigation = (props: NavigationProps) => {
                                             <>
                                                 <div className="submenu__rows">
                                                     {
-                                                        menuItem.subMenu.rows.map(row => (
-                                                            <div className="submenu__row">
+                                                        menuItem.subMenu.rows.map((row, index) => (
+                                                            <div key={index} className="submenu__row">
                                                                 <h3 className={classNames("submenu__headline", {
                                                                     ["submenu__headline--hide"]: !row.headline
                                                                 })}>{row.headline || "_"}</h3>
                                                                 <ul>
                                                                     {
                                                                         row.items.map(rowItem => (
-                                                                            <li className="submenu__item">
+                                                                            <li key={rowItem.name} className="submenu__item">
                                                                                 <a className="submenu__link" href={rowItem.link}>{rowItem.name}</a>
                                                                             </li>
                                                                         ))
@@ -44,7 +44,7 @@ const Navigation = (props: NavigationProps) => {
                                                 <ul className="submenu__bottom">
                                                     {
                                                         menuItem.subMenu.bottom.map(bottomItem => (
-                                                            <li className="submenu__bottom-item">
+                                                            <li key={bottomItem.name} className="submenu__bottom-item">
                                                                 <a className="submenu__bottom-item-link" href={bottomItem.link}>{bottomItem.name}</a>
                                                             </li>
                                                         ))

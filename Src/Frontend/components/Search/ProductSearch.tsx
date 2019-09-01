@@ -13,7 +13,7 @@ const useSolrNet = true;
 const baseSearchUrl = `http://sitecore8helix.local/api/products/search${useSolrNet ? '?useSolrNet=true' : ''}`;
 
 interface ProductSearchProps {
-    addToCart: (productId: string) => any;
+    addToCart: (productId: string) => void;
     cart: Cart;
     isCartUpdating: boolean;
 }
@@ -38,7 +38,7 @@ class ProductSearch extends React.Component<ProductSearchProps, ProductSearchSta
         this.addToCart = this.addToCart.bind(this);
     }
 
-    componentDidMount() {
+    componentDidMount(): void {
         fetch(baseSearchUrl)
             .then(response => {
                 return response.json();
@@ -50,11 +50,11 @@ class ProductSearch extends React.Component<ProductSearchProps, ProductSearchSta
             });
     }
 
-    addToCart(productId) {
+    addToCart(productId): void {
         this.props.addToCart(productId);
     }
 
-    onFacetSelect(facetKey: string, facetValue: string) {
+    onFacetSelect(facetKey: string, facetValue: string): void {
         console.log(`onFacetSelected: ${facetKey} - ${facetValue}`);
         let currentFacets = this.state.selectedFacets;
         const facetExists = currentFacets.find(target => target.facetKey === facetKey);
@@ -82,7 +82,7 @@ class ProductSearch extends React.Component<ProductSearchProps, ProductSearchSta
         this.searchProducts(currentFacets);
     }
 
-    searchProducts(currentlySelectedFacets: SelectedFacet[]) {
+    searchProducts(currentlySelectedFacets: SelectedFacet[]): void {
         let searchString = '';
         if (currentlySelectedFacets.length) {
             searchString = `${useSolrNet ? '&Filters=' : 'Filters'}`;
@@ -113,7 +113,7 @@ class ProductSearch extends React.Component<ProductSearchProps, ProductSearchSta
             });
     }
 
-    render() {
+    render(): React.ReactElement {
         return (<div className="product-search">
             <div className="product-search__meta">
                 <Facets facets={this.state.result.facetResults} selectedFacets={this.state.selectedFacets} onFacetSelect={this.onFacetSelect} />
@@ -126,6 +126,7 @@ class ProductSearch extends React.Component<ProductSearchProps, ProductSearchSta
     }
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 function mapStateToProps(state) {
     return {
         cart: state.cartOverview.cart,
@@ -133,6 +134,7 @@ function mapStateToProps(state) {
     };
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 function mapDispatchToProps(dispatch) {
     return {
         addToCart: (productId) => {

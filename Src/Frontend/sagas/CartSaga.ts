@@ -5,26 +5,26 @@ import { SET_AVAILABILITY_ERROR_ACTION } from '../reducers/ErrorReducer';
 import CartApi, { ProductAvailabilityResponse } from '../webApi/CartApi';
 import { Cart } from "../types/Cart";
 
-function* getCart() {
+function* getCart(): any {
     const cart: Cart = yield call(() => CartApi().getCart());
     yield put(SET_CART_ACTION(cart));
 }
 
-function* checkProductAvailability(productId: string) {
+function* checkProductAvailability(productId: string): any {
     const response: ProductAvailabilityResponse = yield call(() => CartApi().checkProductAvailability(productId));
     return response.available;
 }
 
-function* removeFromCart(action) {
+function* removeFromCart(action): any {
     yield put(SET_CART_UPDATING_ACTION(true));
     yield call(() => CartApi().removeFromCart(action.productId));
     yield getCart();
     yield put(SET_CART_UPDATING_ACTION(false));
 }
 
-function* addToCart(action) {
+function* addToCart(action): any {
     yield put(SET_CART_UPDATING_ACTION(true));
-    var isAvailable = yield checkProductAvailability(action.productId);
+    const isAvailable = yield checkProductAvailability(action.productId);
     if (!isAvailable) {
         yield put(SET_AVAILABILITY_ERROR_ACTION(true));
     } else {
@@ -35,7 +35,7 @@ function* addToCart(action) {
     yield put(SET_CART_UPDATING_ACTION(false));
 }
 
-export function* CartSaga() {
+export function* CartSaga(): any {
     yield takeLatest(GET_CART, getCart);
     yield takeEvery(DELETE_FROM_CART, removeFromCart);
     yield takeEvery(ADD_TO_CART, addToCart);

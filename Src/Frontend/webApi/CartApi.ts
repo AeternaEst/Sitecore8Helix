@@ -16,12 +16,19 @@ export interface RemoveFromCartResponse {
     success: boolean;
 }
 
-const CartApi = function () {
-    var myHeaders = new Headers();
+interface CartApi {
+    addToCart: (productId: string) => Promise<AddToCartResponse>;
+    removeFromCart: (productId: string) => Promise<RemoveFromCartResponse>;
+    getCart: () => Promise<Cart>;
+    checkProductAvailability: (productId: string) => Promise<ProductAvailabilityResponse>;
+}
+
+const CartApi = function (): CartApi {
+    const myHeaders = new Headers();
     myHeaders.append('Content-Type', 'application/json');
     myHeaders.append('Accept', 'application/json');
     return {
-        addToCart: function (productId: string) : Promise<AddToCartResponse> {
+        addToCart: function (productId: string): Promise<AddToCartResponse> {
             return fetch(`${baseCartUrl}/add`, {
                 method: "POST",
                 headers: myHeaders,
