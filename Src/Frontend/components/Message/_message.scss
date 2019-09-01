@@ -1,6 +1,8 @@
 @import "../../styling/colors.scss";
+@import "../../styling//navigation.scss";
 
 .message {
+    height: $messageHeight;
     background-color: $light-theme-color;
     display: flex;
     justify-content: center;

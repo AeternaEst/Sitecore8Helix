@@ -1,36 +1,33 @@
 @import "../../styling/colors.scss"; 
 @import "../../styling/overlays.scss";
+@import "../../styling/navigation.scss";
+@import "../../styling/mixins.scss";
 
 .navigation {
     background-color: $default-grey-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
-    letter-spacing: 3px;
-    font-size: 1.4rem;
+    height: $mainNavigationHeight;
     
-    .navigation__logo {
-        width: 200px;
-        height: 40px;
+    .navigation__logo { 
+        @include size(200px, 40px);
     }
 
-    .navigation__list {
-        margin: 0;
-        padding: 0
+    ul {
+        @include remove-all-spacing;
     }
 
     li {
         list-style: none;
         display: inline-block;
-    }
-
-    a {
-        text-decoration: none;
+        letter-spacing: 3px;
     }
 
     .navigation__item {
         padding: 22px;
+        font-size: 1.4rem;
+        cursor: pointer;
     }
 
     .navigation__item:hover {
@@ -41,25 +38,20 @@
         }
 
         .submenu {
-            display: block;
-            visibility: visible;
+            @include show;
         }
     }
 }
 
 .submenu {
-    display: none;
-    visibility: hidden;
+    @include hide;
     position: fixed;
-    top: 85px;
+    top: $subMenuStartPosition;
     left: 0;
     right: 0;
     width: 100%;
     z-index: z('menus');
-
-    ul {
-        padding: 0;
-    }
+    cursor: default;
 
     li {
         display: block;
@@ -67,17 +59,11 @@
     }
 
     .submenu__rows {
-        flex-grow: 4;
         display: flex;
     }
 
     .submenu__row{
-        margin-right: 50px;
-    }
-
-    .submenu__promotion {
-        flex-grow: 1;
-        background-color: $base-background-color; 
+        width: $subMenuRowWidth
     }
 
     .submenu__headline {
@@ -94,4 +80,48 @@
         color: $light-text-color;
         font-size: 1.1rem;
     }
+
+    .submenu__bottom {
+        display: flex;
+        margin-top: 30px;
+    }
+
+    .submenu__bottom-item {
+        width: $subMenuRowWidth;
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+    }
+
+    .submenu__bottom-item-link {
+        @include anchorLinkButton($light-text-color);
+    }
+
+    .submenu__promotion {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 30px;
+        margin-left: 70px;
+        align-items: center;
+    }
+
+    .submenu__promotion-headline {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+}
+
+.navigation .submenu .submenu__promotion .submenu__promotion-link {
+    @include anchorLinkButton($dark-text-color);
+    color: $dark-text-color;
+    position: absolute;
+    bottom: 10px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+} 
+
+.navigation .submenu .submenu__promotion .submenu__promotion-link:hover {
+    color: $light-text-color;
+    background-color: $dark-text-color;
 }

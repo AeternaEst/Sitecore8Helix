@@ -12,7 +12,7 @@ module.exports = {
       {
         test: /\.(t|j)sx?$/,
         exclude: /node_modules/,
-        use: { loader: 'awesome-typescript-loader' }
+        use: ['awesome-typescript-loader', 'eslint-loader']
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -21,6 +21,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader
           },
           'css-loader', 
+          'postcss-loader', 
           {
             loader: 'sass-loader',
             options: {

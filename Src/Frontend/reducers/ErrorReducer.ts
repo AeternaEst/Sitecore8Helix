@@ -18,14 +18,14 @@ const initialState: ErrorState = {
 
 function ErrorReducer(state = initialState, action): ErrorState {
     switch (action.type) {
-        case SET_AVAILABILITY_ERROR:
-            const hasError = action.hasError;
-            return {
-                ...state,
-                availabilityError: hasError
-            }
-        default:
-            return state;
+    case SET_AVAILABILITY_ERROR:
+        const hasError = action.hasError;
+        return {
+            ...state,
+            availabilityError: hasError
+        }
+    default:
+        return state;
     }
 }
 

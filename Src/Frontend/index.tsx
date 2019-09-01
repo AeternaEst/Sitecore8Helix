@@ -10,13 +10,14 @@ import './main.scss';
 import Container from './components/Container/Container';
 import Navigation from './components/Navigation/Navigation';
 import { ContainerBackground } from './types/Backgrounds';
+import { navigationTestData } from './components/Navigation/navigation-test-data';
 
 const ProductsPage = props => {
     return (
         <div className="products-page">
             <Message {...messageTestData} />
             <Container background={ContainerBackground.DEFAULT_GREY }>
-                <Navigation />
+                <Navigation {...navigationTestData} />
             </Container>
             <CartConnected />
             <ProductSearchConnected/>

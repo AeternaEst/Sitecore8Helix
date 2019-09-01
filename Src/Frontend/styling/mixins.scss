@@ -4,6 +4,26 @@
     height: $height;
 }
 
+@mixin remove-all-spacing {
+    margin: 0;
+    padding: 0
+}
+
+@mixin hide {
+    display: none;
+    visibility: hidden;
+}
+
+@mixin show {
+    display: block;
+    visibility: visible;
+} 
+
+@mixin anchorLinkButton($color) {
+    border: 1px solid $color;
+    padding: 10px;
+}
+
 @mixin default-box-shadow {
     box-shadow: 5px 10px #888888;
 }

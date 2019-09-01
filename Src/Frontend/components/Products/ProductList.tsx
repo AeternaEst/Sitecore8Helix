@@ -10,14 +10,14 @@ interface ProductListProps extends ProductPropsBase {
 const ProductList = (props: ProductListProps) => {
     const { products, addedProductIds, addToCart, isCartLoading } = props;
 
-    if(!products)
+    if (!products)
         return <Loader message="No Products" />;
 
     return (
         <div className="product-list">
             {
                 products.map(product => (
-                    <Product key={product.id} product={product} addedProductIds={addedProductIds} addToCart={addToCart} isCartLoading={isCartLoading}/>
+                    <Product key={product.id} product={product} addedProductIds={addedProductIds} addToCart={addToCart} isCartLoading={isCartLoading} />
                 ))
             }
         </div>

@@ -21,7 +21,7 @@ const SelectedFacets = (props: SelectedFacetsProps) => {
                             ))
                         }
                     </div>
-                    
+
                 ))
             }
         </div>

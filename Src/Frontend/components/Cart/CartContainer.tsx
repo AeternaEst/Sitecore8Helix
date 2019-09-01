@@ -29,19 +29,19 @@ class CartContainer extends React.Component<CartContainerProps> {
     }
 
     render() {
-        if(!this.props.cart) {
+        if (!this.props.cart) {
             return <Loader message="Loading Cart" />
         }
-    
-        if(this.props.isCartUpdating) {
+
+        if (this.props.isCartUpdating) {
             return <Loader message="Cart Updating" />
         }
 
         const totalPrice = this.props.cart.products.reduce((prev, current) => current.product.price + prev, 0);
-        const numberOfProducts  = this.props.cart.products.length;
+        const numberOfProducts = this.props.cart.products.length;
 
         return (
-            <Cart totalPrice={totalPrice} numberOfProducts={numberOfProducts}  cart={this.props.cart} 
+            <Cart totalPrice={totalPrice} numberOfProducts={numberOfProducts} cart={this.props.cart}
                 removeProductFromCart={(productId) => this.props.deleteProduct(productId)} clearCart={() => this.clearCart()} />
         )
     }
@@ -65,6 +65,6 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-const CartConnected = connect(mapStateToProps, mapDispatchToProps)(CartContainer); 
+const CartConnected = connect(mapStateToProps, mapDispatchToProps)(CartContainer);
 
 export default CartConnected;

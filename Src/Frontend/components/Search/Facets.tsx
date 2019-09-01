@@ -11,7 +11,7 @@ interface FacetsProps extends SelectedFacetsProps {
 const Facets = (props: FacetsProps) => {
     const { facets, selectedFacets, onFacetSelect } = props;
 
-    if(!facets)
+    if (!facets)
         return (<p>No Facets</p>);
 
     const mergedFacets = mergeFacets(facets, selectedFacets);
@@ -31,9 +31,9 @@ const Facets = (props: FacetsProps) => {
                     </select>
                 ))
             }
-            <SelectedFacets selectedFacets={selectedFacets} onFacetSelect={onFacetSelect}/>
+            <SelectedFacets selectedFacets={selectedFacets} onFacetSelect={onFacetSelect} />
         </div>
     )
-} 
+}
 
 export default Facets;

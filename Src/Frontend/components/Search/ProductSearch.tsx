@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Facets  from './Facets';
+import Facets from './Facets';
 import ProductList from '../Products/ProductList';
 import { ADD_TO_CART_ACTION } from '../../reducers/CartReducer';
 import { connect } from 'react-redux';
@@ -40,14 +40,14 @@ class ProductSearch extends React.Component<ProductSearchProps, ProductSearchSta
 
     componentDidMount() {
         fetch(baseSearchUrl)
-        .then(response => {
-            return response.json();
-        })
-        .then(response => {
-            this.setState({
-                result: response
+            .then(response => {
+                return response.json();
             })
-        });
+            .then(response => {
+                this.setState({
+                    result: response
+                })
+            });
     }
 
     addToCart(productId) {
@@ -58,8 +58,8 @@ class ProductSearch extends React.Component<ProductSearchProps, ProductSearchSta
         console.log(`onFacetSelected: ${facetKey} - ${facetValue}`);
         let currentFacets = this.state.selectedFacets;
         const facetExists = currentFacets.find(target => target.facetKey === facetKey);
-        
-        if(!facetExists) {
+
+        if (!facetExists) {
             const newFacet = {
                 facetKey: facetKey,
                 facetValues: [facetValue]
@@ -67,14 +67,14 @@ class ProductSearch extends React.Component<ProductSearchProps, ProductSearchSta
             currentFacets.push(newFacet);
         } else {
             const facetValueExists = facetExists.facetValues.find(target => target === facetValue);
-            if(!facetValueExists) {
+            if (!facetValueExists) {
                 facetExists.facetValues.push(facetValue);
             } else {
-                if(facetExists.facetValues.length === 1) {
+                if (facetExists.facetValues.length === 1) {
                     currentFacets = currentFacets.filter(facet => facet.facetKey !== facetKey);
                 } else {
                     facetExists.facetValues = facetExists.facetValues.filter(target => target !== facetValue);
-                } 
+                }
             }
         }
 
@@ -84,43 +84,43 @@ class ProductSearch extends React.Component<ProductSearchProps, ProductSearchSta
 
     searchProducts(currentlySelectedFacets: SelectedFacet[]) {
         let searchString = '';
-        if(currentlySelectedFacets.length) {
-            searchString = `${useSolrNet ? '&Filters=': 'Filters' }`;
+        if (currentlySelectedFacets.length) {
+            searchString = `${useSolrNet ? '&Filters=' : 'Filters'}`;
             currentlySelectedFacets.forEach((facet, index) => {
                 searchString += facet.facetKey + "=";
                 facet.facetValues.forEach((facetValue, index) => {
                     searchString += facetValue;
-                    if(index !== facet.facetValues.length - 1) {
+                    if (index !== facet.facetValues.length - 1) {
                         searchString += ','
                     }
                 });
-            if(index !== currentlySelectedFacets.length -1) {
-                searchString += "|";
-            }
-        });
-        console.log(searchString);
+                if (index !== currentlySelectedFacets.length - 1) {
+                    searchString += "|";
+                }
+            });
+            console.log(searchString);
         }
 
         fetch(baseSearchUrl + searchString)
-        .then(response => {
-            return response.json();
-        })
-        .then(response => {
-            this.setState({
-                result: response,
-                selectedFacets: currentlySelectedFacets
+            .then(response => {
+                return response.json();
             })
-        });
+            .then(response => {
+                this.setState({
+                    result: response,
+                    selectedFacets: currentlySelectedFacets
+                })
+            });
     }
 
     render() {
         return (<div className="product-search">
             <div className="product-search__meta">
-                <Facets facets={this.state.result.facetResults} selectedFacets={this.state.selectedFacets} onFacetSelect={this.onFacetSelect}/>
+                <Facets facets={this.state.result.facetResults} selectedFacets={this.state.selectedFacets} onFacetSelect={this.onFacetSelect} />
                 <DisplayErrorsContainer />
             </div>
 
-            <ProductList products={this.state.result.results} addedProductIds={mapCartToProductIds(this.props.cart)} 
+            <ProductList products={this.state.result.results} addedProductIds={mapCartToProductIds(this.props.cart)}
                 addToCart={this.addToCart} isCartLoading={this.props.isCartUpdating} />
         </div>)
     }

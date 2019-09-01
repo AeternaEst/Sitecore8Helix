@@ -48,24 +48,24 @@ export interface CartOverviewState {
 const defaultState: CartOverviewState = {
     cart: undefined,
     isUpdating: false
-} 
+}
 
 function CartReducer(state = defaultState, action): CartOverviewState {
     switch (action.type) {
-        case SET_CART:
-            const cart = action.cart;
-            return {
-                ...state,
-                cart
-            }
-        case SET_CART_UPDATING:
-            const isUpdating = action.isUpdating;
-            return {
-                ...state,
-                isUpdating
-            }
-        default:
-            return state;
+    case SET_CART:
+        const cart = action.cart;
+        return {
+            ...state,
+            cart
+        }
+    case SET_CART_UPDATING:
+        const isUpdating = action.isUpdating;
+        return {
+            ...state,
+            isUpdating
+        }
+    default:
+        return state;
     }
 }
 

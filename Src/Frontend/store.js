@@ -7,7 +7,7 @@ const sagaMiddleware = createSagaMiddleware()
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(RootReducer, /* preloadedState, */ composeEnhancers(
-  applyMiddleware(sagaMiddleware)
+    applyMiddleware(sagaMiddleware)
 ));
 sagaMiddleware.run(CartSaga);
 

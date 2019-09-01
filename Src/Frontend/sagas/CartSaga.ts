@@ -11,8 +11,8 @@ function* getCart() {
 }
 
 function* checkProductAvailability(productId: string) {
-  const response : ProductAvailabilityResponse = yield call(() => CartApi().checkProductAvailability(productId));
-  return response.available;
+    const response: ProductAvailabilityResponse = yield call(() => CartApi().checkProductAvailability(productId));
+    return response.available;
 }
 
 function* removeFromCart(action) {
@@ -23,20 +23,20 @@ function* removeFromCart(action) {
 }
 
 function* addToCart(action) {
-  yield put(SET_CART_UPDATING_ACTION(true));
-  var isAvailable = yield checkProductAvailability(action.productId);
-  if(!isAvailable) {
-    yield put(SET_AVAILABILITY_ERROR_ACTION(true));
-  } else {
-    yield put(SET_AVAILABILITY_ERROR_ACTION(false));
-    yield call(() => CartApi().addToCart(action.productId));
-    yield getCart();
-  }
-  yield put(SET_CART_UPDATING_ACTION(false));
+    yield put(SET_CART_UPDATING_ACTION(true));
+    var isAvailable = yield checkProductAvailability(action.productId);
+    if (!isAvailable) {
+        yield put(SET_AVAILABILITY_ERROR_ACTION(true));
+    } else {
+        yield put(SET_AVAILABILITY_ERROR_ACTION(false));
+        yield call(() => CartApi().addToCart(action.productId));
+        yield getCart();
+    }
+    yield put(SET_CART_UPDATING_ACTION(false));
 }
 
 export function* CartSaga() {
-  yield takeLatest(GET_CART, getCart);
-  yield takeEvery(DELETE_FROM_CART, removeFromCart);
-  yield takeEvery(ADD_TO_CART, addToCart);
+    yield takeLatest(GET_CART, getCart);
+    yield takeEvery(DELETE_FROM_CART, removeFromCart);
+    yield takeEvery(ADD_TO_CART, addToCart);
 }
