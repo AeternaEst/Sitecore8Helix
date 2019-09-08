@@ -3,30 +3,30 @@ import { AnyAction } from "redux";
 export const SET_AVAILABILITY_ERROR = "SET_AVAILABILITY_ERROR";
 
 export const SET_AVAILABILITY_ERROR_ACTION = (hasError: boolean): AnyAction => {
-    return {
-        type: SET_AVAILABILITY_ERROR,
-        hasError: hasError
-    }
-}
+  return {
+    type: SET_AVAILABILITY_ERROR,
+    hasError: hasError
+  };
+};
 
 export interface ErrorState {
-    availabilityError: boolean;
+  availabilityError: boolean;
 }
 
 const initialState: ErrorState = {
-    availabilityError: false
-}
+  availabilityError: false
+};
 
 function ErrorReducer(state = initialState, action): ErrorState {
-    switch (action.type) {
+  switch (action.type) {
     case SET_AVAILABILITY_ERROR:
-        return {
-            ...state,
-            availabilityError: action.hasError
-        }
+      return {
+        ...state,
+        availabilityError: action.hasError
+      };
     default:
-        return state;
-    }
+      return state;
+  }
 }
 
 export default ErrorReducer;

@@ -1,31 +1,31 @@
 export interface NavigationProps {
-    menuItems: MenuItem[];
+  menuItems: MenuItem[];
 }
 
 interface MenuItem {
-    name: string;
-    link: string;
-    subMenu: SubMenu;
+  name: string;
+  link: string;
+  subMenu: SubMenu;
 }
 
 interface SubMenu {
-    rows: SubMenuRow[];
-    bottom: SubMenuItem[];
-    promotion: SubMenuPromotion;
+  rows: SubMenuRow[];
+  bottom: SubMenuItem[];
+  promotion: SubMenuPromotion;
 }
 
 interface SubMenuRow {
-    headline?: string;
-    items: SubMenuItem[];
+  headline?: string;
+  items: SubMenuItem[];
 }
 
 interface SubMenuItem {
-    name: string;
-    link: string;
+  name: string;
+  link: string;
 }
 
 interface SubMenuPromotion {
-    headline: string;
-    imageUrl: string;
-    link: SubMenuItem;
+  headline: string;
+  imageUrl: string;
+  link: SubMenuItem;
 }

@@ -1,7 +1,7 @@
-import { MessageProps } from './Message';
+import { MessageProps } from "./Message";
 
 const messageTestData: MessageProps = {
-    message: "Gratis levering og nem retunering"
-}
+  message: "Gratis levering og nem retunering"
+};
 
 export default messageTestData;
